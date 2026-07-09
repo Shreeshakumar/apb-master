@@ -9,11 +9,11 @@ class apb_environment;
 	mailbox #(transaction) mbx_rs; 
 	mailbox #(transaction) mbx_ms; 
 
-	generator				gen;
-	driver					drv; 
-	monitor                 mon; 
-	reference_model     	reff; 
-	scoreboard        		scb; 
+	generator		gen;
+	driver			drv; 
+	monitor         mon; 
+	reference_model	reff; 
+	scoreboard 		scb; 
 
 	function new (virtual apb_inf vif_drv, virtual apb_inf vif_mon, virtual apb_inf vif_ref ); 
 		this.vif_drv = vif_drv; 
@@ -28,11 +28,11 @@ class apb_environment;
 		mbx_rs = new(); 
 		mbx_ms = new(); 
 
-		gen = new(mbx_gd); 
-		drv = new(mbx_gd, mbx_dr, vif_drv ); 
-		mon = new(mbx_ms, vif_mon); 
+		gen  = new(mbx_gd); 
+		drv  = new(mbx_gd, mbx_dr, vif_drv ); 
+		mon  = new(mbx_ms, vif_mon); 
 		reff = new(mbx_dr, mbx_rs, vif_ref ); 
-		scb = new(mbx_rs, mbx_ms); 
+		scb  = new(mbx_rs, mbx_ms); 
 	end 
 	endtask 
 

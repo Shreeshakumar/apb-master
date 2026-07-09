@@ -34,11 +34,11 @@ interface apb_inf(input logic PCLK,PREASTn);
 
 		clocking cb_reference@(posedge PCLK);
 			default input #0 output #0;
-			output transfer, write_read, addr_in, wdata_in, strb_in;
-			input  rdata_out, transfer_done, error;
+			//output transfer, write_read, addr_in, wdata_in, strb_in;
+			//input  rdata_out, transfer_done, error;
 			
-			input PADDR, PSEL, PENABLE, PWRITE, PWDATA, PSTRB;
-			output PRDATA, PREADY, PSLVERR;
+			//input PADDR, PSEL, PENABLE, PWRITE, PWDATA, PSTRB;
+			//output PRDATA, PREADY, PSLVERR;
 			
 			input reset;
 				

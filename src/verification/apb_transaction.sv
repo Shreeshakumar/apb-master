@@ -21,8 +21,8 @@ class apb_transaction;
 	rand bit 						PREADY, PSLVERR;
 	
 	//constraint wr_rd_value {{write_enb,read_enb} inside {[0:3]};	}
-	//constraint wr_rd_ve { data_in != 0;	}
-	//constraint wr_rd_not_equal {{write_enb,read_enb} != 2'b11;		}
+	//constraint wr_rd_ve { data_in != 0;	 						}
+	//constraint wr_rd_not_equal {{write_enb,read_enb} != 2'b11;	}
 
 	virtual function apb_transaction copy();
 		copy = new();
