@@ -1,4 +1,4 @@
-interface apb_inf(input logic PCLK,PREASTn);
+interface apb_inf(input logic PCLK,PRESETn);
 	
 		//inputs from user to master
 		logic 						transfer, write_read;
@@ -28,7 +28,7 @@ interface apb_inf(input logic PCLK,PREASTn);
 			input PADDR, PSEL, PENABLE, PWRITE, PWDATA, PSTRB;
 			output PRDATA, PREADY, PSLVERR;		
 			
-			input reset;
+			input PRESETn;
 						
 		endclocking
 
@@ -40,7 +40,7 @@ interface apb_inf(input logic PCLK,PREASTn);
 			//input PADDR, PSEL, PENABLE, PWRITE, PWDATA, PSTRB;
 			//output PRDATA, PREADY, PSLVERR;
 			
-			input reset;
+			input PRESETn;
 				
 		endclocking
 
@@ -51,7 +51,7 @@ interface apb_inf(input logic PCLK,PREASTn);
 			input PADDR, PSEL, PENABLE, PWRITE, PWDATA, PSTRB;
 			input PRDATA, PREADY, PLVERR;
 
-			input reset;
+			input PRESETn;
 			
 		endclocking
 
