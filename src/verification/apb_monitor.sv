@@ -26,7 +26,7 @@ class apb_monitor;
 				trans.transfer_done = vinf.cb_monitor.address;
 				trans.error = vinf.cb_monitor.address;
 			end
-			$display("%m MONITOR TO SCOREBOARD");
+			$display("%m MONITOR");
 			$display("PADDR=%0d \t\t PSEL=%0d",trans.PADDR,trans.PSEL,$time); 
 			$display("PENABLE=%0d \t\t PWRITE=%0d",trans.PENABLE,trans.PWRITE,$time); 
 			$display("PWDATA=%0d \t\t PSTRB=%0d",trans.PWDATA,trans.PSTRB,$time); 

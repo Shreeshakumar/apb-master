@@ -1,22 +1,70 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 07:26:24 on Jul 10,2026
+Start time: 07:35:37 on Jul 10,2026
 vlog -sv "+acc" "+cover" "+fcover" -l src/simulation/log_file.log src/verification/apb_top.sv 
 -- Compiling module apb_master
--- Compiling package ram_package
+-- Compiling package apb_package
 ** Error: ** while parsing file included at src/verification/apb_top.sv(2)
-** at src/verification/apb_package.sv(2): Cannot find `include file "apb_defines.sv" in directories:
-    /tools/mentor/questasim_10.6c/questasim/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** while parsing file included at src/verification/apb_package.sv(5)
+** at src/verification/apb_driver.sv(24): (vlog-2730) Undefined variable: 'transfer'.
 ** Error: ** while parsing file included at src/verification/apb_top.sv(2)
-** while parsing file included at src/verification/apb_package.sv(3)
-** at src/verification/apb_transaction.sv(5): (vlog-2163) Macro `ADDR_WIDTH is undefined.
-** Error: ** while parsing file included at src/verification/apb_top.sv(2)
-** while parsing file included at src/verification/apb_package.sv(3)
-** at src/verification/apb_transaction.sv(6): (vlog-2163) Macro `DATA_WIDTH is undefined.
-** Error: ** while parsing file included at src/verification/apb_top.sv(2)
-** while parsing file included at src/verification/apb_package.sv(3)
-** at src/verification/apb_transaction.sv(7): (vlog-2163) Macro `DATA_WIDTH is undefined.
+** while parsing file included at src/verification/apb_package.sv(7)
+** at src/verification/apb_reference_model.sv(59): (vlog-2730) Undefined variable: 'PSLVERR'.
 ** Error: (vlog-13069) ** while parsing file included at src/verification/apb_top.sv(2)
-** while parsing file included at src/verification/apb_package.sv(3)
-** at src/verification/apb_transaction.sv(7): near "/": syntax error, unexpected '/'.
-End time: 07:26:25 on Jul 10,2026, Elapsed time: 0:00:01
-Errors: 5, Warnings: 0
+** while parsing file included at src/verification/apb_package.sv(7)
+** at src/verification/apb_reference_model.sv(64): near "endfunction": syntax error, unexpected endfunction, expecting endtask.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(8)
+** at src/verification/apb_scoreboard.sv(9): Illegal declaration after the statement near line '1'.  Declarations must precede statements.  Look for stray semicolons.
+** Error: (vlog-13069) ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(8)
+** at src/verification/apb_scoreboard.sv(12): near "endfunction": syntax error, unexpected endfunction, expecting endtask.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(8)
+** at src/verification/apb_scoreboard.sv(44): (vlog-2730) Undefined variable: 'match'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(8)
+** at src/verification/apb_scoreboard.sv(49): (vlog-2730) Undefined variable: 'miss'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(7): (vlog-2730) Undefined variable: 'transaction'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(12): Invalid type 'generator'. Please check the type of the variable 'gen'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(13): Invalid type 'driver'. Please check the type of the variable 'drv'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(14): Invalid type 'monitor'. Please check the type of the variable 'mon'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(15): Invalid type 'reference_model'. Please check the type of the variable 'reff'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(16): Invalid type 'scoreboard'. Please check the type of the variable 'scb'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(31): (vlog-2730) Undefined variable: 'gen'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(32): (vlog-2730) Undefined variable: 'drv'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(33): (vlog-2730) Undefined variable: 'mon'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(34): (vlog-2730) Undefined variable: 'reff'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(9)
+** at src/verification/apb_environment.sv(35): (vlog-2730) Undefined variable: 'scb'.
+-- Compiling interface apb_inf
+** Error: ** while parsing file included at src/verification/apb_top.sv(3)
+** at src/verification/apb_interface.sv(47): (vlog-2730) Undefined variable: 'clk'.
+** Error: ** while parsing file included at src/verification/apb_top.sv(3)
+** at src/verification/apb_interface.sv(52): (vlog-2143) Unable to find 'PLVERR' in scope apb_inf.
+-- Compiling module apb_top
+** Error: src/verification/apb_top.sv(7): (vlog-13006) Could not find the package (apb_package).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: (vlog-13069) src/verification/apb_top.sv(35): near ";": syntax error, unexpected ';', expecting '('.
+** Error: src/verification/apb_top.sv(36): (vlog-2730) Undefined variable: 'test_1'.
+End time: 07:35:38 on Jul 10,2026, Elapsed time: 0:00:01
+Errors: 23, Warnings: 0

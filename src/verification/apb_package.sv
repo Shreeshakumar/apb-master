@@ -1,5 +1,5 @@
-package ram_package;
-  `include "apb_defines.sv"
+package apb_package;
+  `include "apb_defines.svh"
   `include "apb_transaction.sv"
   `include "apb_generator.sv"
   `include "apb_driver.sv"

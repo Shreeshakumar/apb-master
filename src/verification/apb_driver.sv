@@ -21,7 +21,7 @@ class apb_driver;
 			mbx_gd.get(trans);
 			if(vif.cb_driver.PRESETn == 0)
 			begin
-				transfer <= 0;
+				trans.transfer <= 0;
 				mbx_dr.put(trans);
 				@(vif.cb_driver);
 			end
