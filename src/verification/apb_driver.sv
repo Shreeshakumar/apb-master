@@ -34,9 +34,10 @@ class apb_driver;
 			if(!rst) begin repeat(8) $write("\tRESET"); $display(); end
 			$display("transfer   = %0d",trans.transfer);
 			$display("write_read = %0d",trans.write_read);
-			$display("addr_in    = %0d",trans.addr_in);
-			$display("strb_in    = %0b",trans.strb_in);
-			$display("PRDATA     = %0d",trans.PRDATA);
+			$display("addr_in    = 'h%0h",trans.addr_in);
+			$display("wdata_in   = 'h%0h",trans.wdata_in);
+			$display("strb_in    = 'h%0h",trans.strb_in);
+			$display("PRDATA     = 'h%0h",trans.PRDATA);
 			$display("PREADY     = %0d",trans.PREADY);
 			$display("PSLVERR    = %0d",trans.PSLVERR);
 			$display("*********************************");
