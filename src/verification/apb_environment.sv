@@ -33,9 +33,9 @@ class apb_environment;
 			gen.start(); 
 			drvv.start(); 
 			monn.start(); 
-			//scb.start();
+			scb.start();
 		join 
-		//scb.summary(); 
+		scb.summary(); 
 	endtask 
 
 endclass 

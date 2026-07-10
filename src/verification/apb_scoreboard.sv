@@ -25,6 +25,7 @@ class apb_scoreboard;
 			begin
 				//	mbx_ms.get(trans_mon);
 				apb_transaction::count = apb_transaction::count +1;
+				$display("********************************************************************************    apb_transaction::count = %d",apb_transaction::count);
 				if(apb_transaction::count %4 == 0) apb_transaction::send = !apb_transaction::send;
 			end
 			join
