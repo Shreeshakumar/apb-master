@@ -2,6 +2,23 @@ QUESTA := /home/share/questa.csh
 SHELL := /bin/csh
 TEST ?= apb_master_test
 
+# ANSI Colors
+RED     := \033[1;31m
+GREEN   := \033[1;32m
+YELLOW  := \033[1;33m
+BLUE    := \033[1;34m
+MAGENTA := \033[1;35m
+CYAN    := \033[1;36m
+RESET   := \033[0m
+
+COLORIZE = perl -pe '\
+s/Error/\e[1;31m$$&\e[0m/g; \
+s/ERROR/\e[1;31m$$&\e[0m/g; \
+s/Warning/\e[1;33m$$&\e[0m/g; \
+s/WARNING/\e[1;33m$$&\e[0m/g; \
+s/Fatal/\e[1;35m$$&\e[0m/g; \
+s/FATAL/\e[1;35m$$&\e[0m/g;'
+
 .ONESHELL:	
 all:
 	make com
@@ -12,22 +29,22 @@ all:
 com:
 	@echo "\t\t\t\t........................................................ COMPILING CODE ........................................................."
 	source $(QUESTA)
-	vlog -sv +acc +cover +fcover -l src/simulation/log_file.log src/verification/apb_top.sv |& sed 's/Error/\x1b[1;31m&\x1b[0m/g'
+	vlog -sv +acc +cover +fcover -l src/simulation/log_file.log src/verification/apb_top.sv |& $(COLORIZE)
 
 sim:
 	@echo "\t\t\t\t................................................... SIMULATING TEST = $(TEST) ..................................................."
 	source $(QUESTA)
-	vsim -vopt work.apb_top -voptargs=+acc=npr -assertdebug -l src/simulation/log_file.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll src/simulation/ucdb_file.ucdb; run -all; exit"
+	vsim -vopt work.apb_top -voptargs=+acc=npr -assertdebug -l src/simulation/log_file.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll src/simulation/ucdb_file.ucdb; run -all; exit" |& $(COLORIZE)
 
 cov:
 	@echo "\t\t\t\t.................................................... CREATING COVERAGE REPORT ..................................................."
 	source $(QUESTA)
-	vcover report -html src/simulation/ucdb_file.ucdb -htmldir src/simulation/covReport -details
+	vcover report -html src/simulation/ucdb_file.ucdb -htmldir src/simulation/covReport -details |& $(COLORIZE)
 	
 pu:
-	@echo "\t\t\t\t..........................................................COMPILING CODE........................................................."
+	@echo "\t\t\t\t....................................................... PUSHING TO GIT REPO ......................................................"
 	git add .
 	git commit -m 'commiting'
-	git push
+	git push |& $(COLORIZE)
 
 
