@@ -1,0 +1,196 @@
+var g_data = {
+b5:[{dummy:0},
+{anchor:'cvg182',items:[{z:'        if (!PRESETn)',f:'src/verification/../design/apb_master.sv',l:'54',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn)',f:'src/verification/../design/apb_master.sv',l:'54',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else',f:'src/verification/../design/apb_master.sv',l:'59',h:'498',c:'g'}
+]},
+{anchor:'cvg183',items:[{z:'        case (state)',f:'src/verification/../design/apb_master.sv',l:'70',c:'Y',p:'75.00'}
+,{cr:'c',t:'T',z:'            IDLE: begin',f:'src/verification/../design/apb_master.sv',l:'71',h:'167',c:'g'}
+,{cr:'c',t:'T',z:'            SETUP: begin',f:'src/verification/../design/apb_master.sv',l:'75',h:'167',c:'g'}
+,{cr:'c',t:'T',z:'            ACCESS: begin',f:'src/verification/../design/apb_master.sv',l:'79',h:'168',c:'g'}
+,{cr:'m',t:'T',z:'            default: next_state = IDLE;',f:'src/verification/../design/apb_master.sv',l:'84',h:'0',c:'r'}
+]},
+{anchor:'cvg184',items:[{z:'                if (transfer)',f:'src/verification/../design/apb_master.sv',l:'72',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                if (transfer)',f:'src/verification/../design/apb_master.sv',l:'72',h:'166',c:'g'}
+,{cr:'c',t:'A',z:'                if (transfer)',f:'src/verification/../design/apb_master.sv',l:'72',h:'1',c:'g'}
+]},
+{anchor:'cvg185',items:[{z:'                if (PREADY)',f:'src/verification/../design/apb_master.sv',l:'81',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                if (PREADY)',f:'src/verification/../design/apb_master.sv',l:'81',h:'165',c:'g'}
+,{cr:'c',t:'A',z:'                if (PREADY)',f:'src/verification/../design/apb_master.sv',l:'81',h:'3',c:'g'}
+]},
+{anchor:'cvg186',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'91',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'91',h:'2',c:'g'}
+,{cr:'c',t:'T',z:'        else if (state == IDLE && transfer) begin',f:'src/verification/../design/apb_master.sv',l:'97',h:'165',c:'g'}
+,{cr:'c',t:'A',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'91',h:'331',c:'g'}
+]},
+{anchor:'cvg187',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'109',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'109',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else begin',f:'src/verification/../design/apb_master.sv',l:'115',h:'495',c:'g'}
+]},
+{anchor:'cvg188',items:[{z:'            case (state)',f:'src/verification/../design/apb_master.sv',l:'116',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                SETUP: begin',f:'src/verification/../design/apb_master.sv',l:'117',h:'165',c:'g'}
+,{cr:'c',t:'T',z:'                default: begin',f:'src/verification/../design/apb_master.sv',l:'130',h:'330',c:'g'}
+]},
+{anchor:'cvg189',items:[{z:'                    if (write_read_reg) begin',f:'src/verification/../design/apb_master.sv',l:'121',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'                    if (write_read_reg) begin',f:'src/verification/../design/apb_master.sv',l:'121',h:'165',c:'g'}
+,{cr:'m',t:'E',z:'                    else begin',f:'src/verification/../design/apb_master.sv',l:'125',h:'0',c:'r'}
+]},
+{anchor:'cvg190',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'143',c:'Y',p:'66.66'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'143',h:'2',c:'g'}
+,{cr:'m',t:'T',z:'        else if (state == ACCESS && PREADY && !write_read_reg) begin',f:'src/verification/../design/apb_master.sv',l:'146',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'143',h:'498',c:'g'}
+]},
+{anchor:'cvg191',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'155',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'155',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else begin',f:'src/verification/../design/apb_master.sv',l:'158',h:'498',c:'g'}
+]},
+{anchor:'cvg192',items:[{z:'            if (state == ACCESS && PREADY)',f:'src/verification/../design/apb_master.sv',l:'160',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (state == ACCESS && PREADY)',f:'src/verification/../design/apb_master.sv',l:'160',h:'165',c:'g'}
+,{cr:'c',t:'E',z:'            else',f:'src/verification/../design/apb_master.sv',l:'162',h:'333',c:'g'}
+]},
+{anchor:'cvg193',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'170',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'170',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else begin',f:'src/verification/../design/apb_master.sv',l:'173',h:'498',c:'g'}
+]},
+{anchor:'cvg194',items:[{z:'            if (state == ACCESS && PREADY && PSLVERR)',f:'src/verification/../design/apb_master.sv',l:'175',c:'Y',p:'66.66'}
+,{cr:'m',t:'I',z:'            if (state == ACCESS && PREADY && PSLVERR)',f:'src/verification/../design/apb_master.sv',l:'175',h:'0',c:'r'}
+,{cr:'c',t:'T',z:'            else if (state == IDLE)',f:'src/verification/../design/apb_master.sv',l:'177',h:'166',c:'g'}
+,{cr:'c',t:'A',z:'            if (state == ACCESS && PREADY && PSLVERR)',f:'src/verification/../design/apb_master.sv',l:'175',h:'332',c:'g'}
+]}],
+b181:[{dummy:0},
+{anchor:'cvg182',items:[{z:'        if (!PRESETn)',f:'src/verification/../design/apb_master.sv',l:'54',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn)',f:'src/verification/../design/apb_master.sv',l:'54',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else',f:'src/verification/../design/apb_master.sv',l:'59',h:'498',c:'g'}
+]},
+{anchor:'cvg183',items:[{z:'        case (state)',f:'src/verification/../design/apb_master.sv',l:'70',c:'Y',p:'75.00'}
+,{cr:'c',t:'T',z:'            IDLE: begin',f:'src/verification/../design/apb_master.sv',l:'71',h:'167',c:'g'}
+,{cr:'c',t:'T',z:'            SETUP: begin',f:'src/verification/../design/apb_master.sv',l:'75',h:'167',c:'g'}
+,{cr:'c',t:'T',z:'            ACCESS: begin',f:'src/verification/../design/apb_master.sv',l:'79',h:'168',c:'g'}
+,{cr:'m',t:'T',z:'            default: next_state = IDLE;',f:'src/verification/../design/apb_master.sv',l:'84',h:'0',c:'r'}
+]},
+{anchor:'cvg184',items:[{z:'                if (transfer)',f:'src/verification/../design/apb_master.sv',l:'72',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                if (transfer)',f:'src/verification/../design/apb_master.sv',l:'72',h:'166',c:'g'}
+,{cr:'c',t:'A',z:'                if (transfer)',f:'src/verification/../design/apb_master.sv',l:'72',h:'1',c:'g'}
+]},
+{anchor:'cvg185',items:[{z:'                if (PREADY)',f:'src/verification/../design/apb_master.sv',l:'81',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                if (PREADY)',f:'src/verification/../design/apb_master.sv',l:'81',h:'165',c:'g'}
+,{cr:'c',t:'A',z:'                if (PREADY)',f:'src/verification/../design/apb_master.sv',l:'81',h:'3',c:'g'}
+]},
+{anchor:'cvg186',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'91',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'91',h:'2',c:'g'}
+,{cr:'c',t:'T',z:'        else if (state == IDLE && transfer) begin',f:'src/verification/../design/apb_master.sv',l:'97',h:'165',c:'g'}
+,{cr:'c',t:'A',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'91',h:'331',c:'g'}
+]},
+{anchor:'cvg187',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'109',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'109',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else begin',f:'src/verification/../design/apb_master.sv',l:'115',h:'495',c:'g'}
+]},
+{anchor:'cvg188',items:[{z:'            case (state)',f:'src/verification/../design/apb_master.sv',l:'116',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                SETUP: begin',f:'src/verification/../design/apb_master.sv',l:'117',h:'165',c:'g'}
+,{cr:'c',t:'T',z:'                default: begin',f:'src/verification/../design/apb_master.sv',l:'130',h:'330',c:'g'}
+]},
+{anchor:'cvg189',items:[{z:'                    if (write_read_reg) begin',f:'src/verification/../design/apb_master.sv',l:'121',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'                    if (write_read_reg) begin',f:'src/verification/../design/apb_master.sv',l:'121',h:'165',c:'g'}
+,{cr:'m',t:'E',z:'                    else begin',f:'src/verification/../design/apb_master.sv',l:'125',h:'0',c:'r'}
+]},
+{anchor:'cvg190',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'143',c:'Y',p:'66.66'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'143',h:'2',c:'g'}
+,{cr:'m',t:'T',z:'        else if (state == ACCESS && PREADY && !write_read_reg) begin',f:'src/verification/../design/apb_master.sv',l:'146',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'143',h:'498',c:'g'}
+]},
+{anchor:'cvg191',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'155',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'155',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else begin',f:'src/verification/../design/apb_master.sv',l:'158',h:'498',c:'g'}
+]},
+{anchor:'cvg192',items:[{z:'            if (state == ACCESS && PREADY)',f:'src/verification/../design/apb_master.sv',l:'160',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (state == ACCESS && PREADY)',f:'src/verification/../design/apb_master.sv',l:'160',h:'165',c:'g'}
+,{cr:'c',t:'E',z:'            else',f:'src/verification/../design/apb_master.sv',l:'162',h:'333',c:'g'}
+]},
+{anchor:'cvg193',items:[{z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'170',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (!PRESETn) begin',f:'src/verification/../design/apb_master.sv',l:'170',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else begin',f:'src/verification/../design/apb_master.sv',l:'173',h:'498',c:'g'}
+]},
+{anchor:'cvg194',items:[{z:'            if (state == ACCESS && PREADY && PSLVERR)',f:'src/verification/../design/apb_master.sv',l:'175',c:'Y',p:'66.66'}
+,{cr:'m',t:'I',z:'            if (state == ACCESS && PREADY && PSLVERR)',f:'src/verification/../design/apb_master.sv',l:'175',h:'0',c:'r'}
+,{cr:'c',t:'T',z:'            else if (state == IDLE)',f:'src/verification/../design/apb_master.sv',l:'177',h:'166',c:'g'}
+,{cr:'c',t:'A',z:'            if (state == ACCESS && PREADY && PSLVERR)',f:'src/verification/../design/apb_master.sv',l:'175',h:'332',c:'g'}
+]}],
+b449:[{dummy:0},
+{anchor:'cvg450',items:[{z:'			if(tt.PREADY) tt.send = !tt.send;',f:'src/verification/apb_scoreboard.sv',l:'24',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if(tt.PREADY) tt.send = !tt.send;',f:'src/verification/apb_scoreboard.sv',l:'24',h:'4',c:'g'}
+,{cr:'c',t:'A',z:'			if(tt.PREADY) tt.send = !tt.send;',f:'src/verification/apb_scoreboard.sv',l:'24',h:'6',c:'g'}
+]},
+{anchor:'cvg451',items:[{z:'			if(tt.transfer_done) cnt = 0;',f:'src/verification/apb_scoreboard.sv',l:'25',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if(tt.transfer_done) cnt = 0;',f:'src/verification/apb_scoreboard.sv',l:'25',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'			if(tt.transfer_done) cnt = 0;',f:'src/verification/apb_scoreboard.sv',l:'25',h:'8',c:'g'}
+]}],
+b452:[{dummy:0},
+{anchor:'cvg453',items:[{z:'		if(tt.transfer && cnt == 0)',f:'src/verification/apb_scoreboard.sv',l:'34',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(tt.transfer && cnt == 0)',f:'src/verification/apb_scoreboard.sv',l:'34',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'		if(tt.transfer && cnt == 0)',f:'src/verification/apb_scoreboard.sv',l:'34',h:'8',c:'g'}
+]},
+{anchor:'cvg454',items:[{z:'     	if(!(!tt.PADDR && !tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDA...',f:'src/verification/apb_scoreboard.sv',l:'35',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'     	if(!(!tt.PADDR && !tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDA...',f:'src/verification/apb_scoreboard.sv',l:'35',h:'2',c:'g'}
+,{cr:'m',t:'A',z:'     	if(!(!tt.PADDR && !tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDA...',f:'src/verification/apb_scoreboard.sv',l:'35',h:'0',c:'r'}
+]},
+{anchor:'cvg455',items:[{z:'     	if(tt.transfer && cnt == 1 && tt.write_read)',f:'src/verification/apb_scoreboard.sv',l:'38',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'     	if(tt.transfer && cnt == 1 && tt.write_read)',f:'src/verification/apb_scoreboard.sv',l:'38',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'     	if(tt.transfer && cnt == 1 && tt.write_read)',f:'src/verification/apb_scoreboard.sv',l:'38',h:'8',c:'g'}
+]},
+{anchor:'cvg456',items:[{z:'     	if(!(tt.PADDR && tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDATA...',f:'src/verification/apb_scoreboard.sv',l:'39',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'     	if(!(tt.PADDR && tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDATA...',f:'src/verification/apb_scoreboard.sv',l:'39',h:'2',c:'g'}
+,{cr:'m',t:'A',z:'     	if(!(tt.PADDR && tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDATA...',f:'src/verification/apb_scoreboard.sv',l:'39',h:'0',c:'r'}
+]},
+{anchor:'cvg457',items:[{z:'     	if(tt.transfer && cnt == 1 && tt.write_read && tt.PREADY)',f:'src/verification/apb_scoreboard.sv',l:'42',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'     	if(tt.transfer && cnt == 1 && tt.write_read && tt.PREADY)',f:'src/verification/apb_scoreboard.sv',l:'42',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'     	if(tt.transfer && cnt == 1 && tt.write_read && tt.PREADY)',f:'src/verification/apb_scoreboard.sv',l:'42',h:'10',c:'g'}
+]},
+{anchor:'cvg458',items:[{z:'     	if(!(!tt.PADDR==tt.addr_in && tt.PSEL && tt.PENABLE && tt.PWRITE &&...',f:'src/verification/apb_scoreboard.sv',l:'43',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'     	if(!(!tt.PADDR==tt.addr_in && tt.PSEL && tt.PENABLE && tt.PWRITE &&...',f:'src/verification/apb_scoreboard.sv',l:'43',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'     	if(!(!tt.PADDR==tt.addr_in && tt.PSEL && tt.PENABLE && tt.PWRITE &&...',f:'src/verification/apb_scoreboard.sv',l:'43',h:'0',c:'r'}
+]},
+{anchor:'cvg459',items:[{z:'     	if (comp) 	begin	match++	;',f:'src/verification/apb_scoreboard.sv',l:'46',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'     	if (comp) 	begin	match++	;',f:'src/verification/apb_scoreboard.sv',l:'46',h:'6',c:'g'}
+,{cr:'c',t:'E',z:'     	else 	begin	miss++;',f:'src/verification/apb_scoreboard.sv',l:'49',h:'4',c:'g'}
+]}],
+b664:[{dummy:0},
+{anchor:'cvg665',items:[{z:'			if(tt.PREADY) tt.send = !tt.send;',f:'src/verification/apb_scoreboard.sv',l:'24',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if(tt.PREADY) tt.send = !tt.send;',f:'src/verification/apb_scoreboard.sv',l:'24',h:'4',c:'g'}
+,{cr:'c',t:'A',z:'			if(tt.PREADY) tt.send = !tt.send;',f:'src/verification/apb_scoreboard.sv',l:'24',h:'6',c:'g'}
+]},
+{anchor:'cvg666',items:[{z:'			if(tt.transfer_done) cnt = 0;',f:'src/verification/apb_scoreboard.sv',l:'25',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if(tt.transfer_done) cnt = 0;',f:'src/verification/apb_scoreboard.sv',l:'25',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'			if(tt.transfer_done) cnt = 0;',f:'src/verification/apb_scoreboard.sv',l:'25',h:'8',c:'g'}
+]}],
+b667:[{dummy:0},
+{anchor:'cvg668',items:[{z:'		if(tt.transfer && cnt == 0)',f:'src/verification/apb_scoreboard.sv',l:'34',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(tt.transfer && cnt == 0)',f:'src/verification/apb_scoreboard.sv',l:'34',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'		if(tt.transfer && cnt == 0)',f:'src/verification/apb_scoreboard.sv',l:'34',h:'8',c:'g'}
+]},
+{anchor:'cvg669',items:[{z:'     	if(!(!tt.PADDR && !tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDA...',f:'src/verification/apb_scoreboard.sv',l:'35',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'     	if(!(!tt.PADDR && !tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDA...',f:'src/verification/apb_scoreboard.sv',l:'35',h:'2',c:'g'}
+,{cr:'m',t:'A',z:'     	if(!(!tt.PADDR && !tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDA...',f:'src/verification/apb_scoreboard.sv',l:'35',h:'0',c:'r'}
+]},
+{anchor:'cvg670',items:[{z:'     	if(tt.transfer && cnt == 1 && tt.write_read)',f:'src/verification/apb_scoreboard.sv',l:'38',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'     	if(tt.transfer && cnt == 1 && tt.write_read)',f:'src/verification/apb_scoreboard.sv',l:'38',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'     	if(tt.transfer && cnt == 1 && tt.write_read)',f:'src/verification/apb_scoreboard.sv',l:'38',h:'8',c:'g'}
+]},
+{anchor:'cvg671',items:[{z:'     	if(!(tt.PADDR && tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDATA...',f:'src/verification/apb_scoreboard.sv',l:'39',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'     	if(!(tt.PADDR && tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDATA...',f:'src/verification/apb_scoreboard.sv',l:'39',h:'2',c:'g'}
+,{cr:'m',t:'A',z:'     	if(!(tt.PADDR && tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDATA...',f:'src/verification/apb_scoreboard.sv',l:'39',h:'0',c:'r'}
+]},
+{anchor:'cvg672',items:[{z:'     	if(tt.transfer && cnt == 1 && tt.write_read && tt.PREADY)',f:'src/verification/apb_scoreboard.sv',l:'42',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'     	if(tt.transfer && cnt == 1 && tt.write_read && tt.PREADY)',f:'src/verification/apb_scoreboard.sv',l:'42',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'     	if(tt.transfer && cnt == 1 && tt.write_read && tt.PREADY)',f:'src/verification/apb_scoreboard.sv',l:'42',h:'10',c:'g'}
+]},
+{anchor:'cvg673',items:[{z:'     	if(!(!tt.PADDR==tt.addr_in && tt.PSEL && tt.PENABLE && tt.PWRITE &&...',f:'src/verification/apb_scoreboard.sv',l:'43',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'     	if(!(!tt.PADDR==tt.addr_in && tt.PSEL && tt.PENABLE && tt.PWRITE &&...',f:'src/verification/apb_scoreboard.sv',l:'43',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'     	if(!(!tt.PADDR==tt.addr_in && tt.PSEL && tt.PENABLE && tt.PWRITE &&...',f:'src/verification/apb_scoreboard.sv',l:'43',h:'0',c:'r'}
+]},
+{anchor:'cvg674',items:[{z:'     	if (comp) 	begin	match++	;',f:'src/verification/apb_scoreboard.sv',l:'46',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'     	if (comp) 	begin	match++	;',f:'src/verification/apb_scoreboard.sv',l:'46',h:'6',c:'g'}
+,{cr:'c',t:'E',z:'     	else 	begin	miss++;',f:'src/verification/apb_scoreboard.sv',l:'49',h:'4',c:'g'}
+]}],
+dummyEnd:0
+};
+processBranchesData(g_data);
