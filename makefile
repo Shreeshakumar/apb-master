@@ -12,7 +12,7 @@ all:
 com:
 	@echo "\t\t\t\t........................................................ COMPILING CODE ........................................................."
 	source $(QUESTA)
-	vlog -sv +acc +cover +fcover -l src/simulation/log_file.log src/verification/apb_top.sv 
+	vlog -sv +acc +cover +fcover -l src/simulation/log_file.log src/verification/apb_top.sv |& sed 's/Error/\x1b[1;31m&\x1b[0m/g'
 
 sim:
 	@echo "\t\t\t\t................................................... SIMULATING TEST = $(TEST) ..................................................."

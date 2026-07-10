@@ -1,0 +1,22 @@
+QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
+Start time: 07:03:34 on Jul 10,2026
+vlog -sv "+acc" "+cover" "+fcover" -l src/simulation/log_file.log src/verification/apb_top.sv 
+-- Compiling module apb_master
+-- Compiling package ram_package
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** at src/verification/apb_package.sv(2): Cannot find `include file "apb_defines.sv" in directories:
+    /tools/mentor/questasim_10.6c/questasim/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(3)
+** at src/verification/apb_transaction.sv(5): (vlog-2163) Macro `ADDR_WIDTH is undefined.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(3)
+** at src/verification/apb_transaction.sv(6): (vlog-2163) Macro `DATA_WIDTH is undefined.
+** Error: ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(3)
+** at src/verification/apb_transaction.sv(7): (vlog-2163) Macro `DATA_WIDTH is undefined.
+** Error: (vlog-13069) ** while parsing file included at src/verification/apb_top.sv(2)
+** while parsing file included at src/verification/apb_package.sv(3)
+** at src/verification/apb_transaction.sv(7): near "/": syntax error, unexpected '/'.
+End time: 07:03:34 on Jul 10,2026, Elapsed time: 0:00:00
+Errors: 5, Warnings: 0
