@@ -30,12 +30,13 @@ class apb_reference_model;
 				trans.rdata_out 	= trans.PRDATA;
 				trans.transfer_done = 0;
 				trans.error 		= 0;
+				mbx_rs.put(trans);
 			end
 			else
 			begin
 				trans.PSEL 		= 0;			//IDLE
 				trans.PENABLE 	= 0;
-				
+				mbx_rs.put(trans);
 				if (trans.transfer)
 				begin
 					@(vif.cb_reference);		//SETUP
@@ -45,10 +46,12 @@ class apb_reference_model;
 						trans.PWRITE	=trans.write_read;
 						trans.PWDATA	=trans.wdata_in;
 						trans.PSTRB		=trans.strb_in;
+						mbx_rs.put(trans);
 					
 					@(vif.cb_reference);		//ACCESS
 						trans.PSEL 		= 1;
 						trans.PENABLE 	= 1;
+						mbx_rs.put(trans);
 						@(vif.cb_reference);
 
 					wait(trans.PREADY);			//transfer_done
@@ -57,6 +60,7 @@ class apb_reference_model;
 						trans.rdata_out 	= trans.PRDATA;
 						trans.transfer_done = 1;
 						trans.error 		= trans.PSLVERR;
+						mbx_rs.put(trans);
 				end
 			end
 		end

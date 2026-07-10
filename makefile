@@ -18,6 +18,9 @@ s/Warning/\e[1;33m$$&\e[0m/g; \
 s/WARNING/\e[1;33m$$&\e[0m/g; \
 s/Fatal/\e[1;35m$$&\e[0m/g; \
 s/FATAL/\e[1;35m$$&\e[0m/g; \
+s/apb_driver/\e[1;32m$$&\e[0m/g; \
+s/apb_scoreboard/\e[1;35m$$&\e[0m/g; \
+s/apb_monitor/\e[1;33m$$&\e[0m/g; \
 s/shreeshakumar/\e[1;31m$$&\e[0m/g; \
 s/shreeshakumar/\e[1;31m$$&\e[0m/g;'
 
@@ -27,6 +30,10 @@ all:
 	make sim
 	make cov
 	make pu
+	
+cc:
+	make com
+	make sim
 
 com:
 	@echo "\t\t\t\t$(RED)........................................................ COMPILING CODE .........................................................$(RESET)"

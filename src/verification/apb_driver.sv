@@ -2,34 +2,25 @@ class apb_driver;
 	
 	apb_transaction trans;
 	mailbox#(apb_transaction)mbx_gd;
-	mailbox#(apb_transaction)mbx_dr;
 	virtual apb_inf.DRIVER vif;
 	
 	bit rst;
 
-	function new( mailbox#(apb_transaction)mbx_gd, mailbox#(apb_transaction)mbx_dr, virtual apb_inf.DRIVER vif );
+	function new( mailbox#(apb_transaction)mbx_gd, virtual apb_inf.DRIVER vif );
 		this.mbx_gd = mbx_gd;
-		this.mbx_dr = mbx_dr;
 		this.vif = vif;
 	endfunction
 
 	task start();
-		repeat(4) @(vif.cb_driver);
+		repeat(2) @(vif.cb_driver);
 		for(int i =0; i<`num_of_trans; i++)
 		begin
-			$display("\n%m Driver ran at iteration %0d\t\t\t\ttime = %0t",i,$time);
-			$display("STARTING DRIVER TRASANCTION");
-			trans = new();
 			mbx_gd.get(trans);
+			@(vif.cb_driver);
+			$display("\n%m Driver ran at iteration %0d\t\ttime = %0t",i,$time);
+			$display("STARTING DRIVER TRASANCTION");
+			//trans = new();
 			rst = vif.cb_driver.PRESETn ;
-			if(vif.cb_driver.PRESETn == 0)
-			begin
-				trans.transfer <= 0;
-				mbx_dr.put(trans);
-				@(vif.cb_driver);
-			end
-			else if (vif.cb_driver.PRESETn == 1)
-			begin
 				vif.cb_driver.transfer <= trans.transfer;
 				vif.cb_driver.write_read <= trans.write_read;
 				vif.cb_driver.addr_in<= trans.addr_in;
@@ -38,9 +29,7 @@ class apb_driver;
 				vif.cb_driver.PRDATA <= trans.PRDATA;
 				vif.cb_driver.PREADY <= trans.PREADY;
 				vif.cb_driver.PSLVERR <= trans.PSLVERR;
-				mbx_dr.put(trans);
-				@(vif.cb_driver);
-			end
+			$display("********************************************************************************************************************************");
 			$display("******** driver_sending time= %0t **********",$time);
 			if(!rst) begin repeat(8) $write("\tRESET"); $display(); end
 			$display("transfer   = %0d",trans.transfer);
@@ -50,7 +39,8 @@ class apb_driver;
 			$display("PRDATA     = %0d",trans.PRDATA);
 			$display("PREADY     = %0d",trans.PREADY);
 			$display("PSLVERR    = %0d",trans.PSLVERR);
-			$display("********************************************");
+			$display("*********************************");
+			wait(apb_transaction::send);
 		end
 	endtask
 

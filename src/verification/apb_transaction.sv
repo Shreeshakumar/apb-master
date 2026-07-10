@@ -5,6 +5,11 @@ class apb_transaction;
 	rand bit [`ADDR_WIDTH-1:0]		addr_in;
 	rand bit [`DATA_WIDTH-1:0]		wdata_in;
 	rand bit [(`DATA_WIDTH/8)-1:0]	strb_in;
+	//bit 						prev_transfer, prev_write_read;
+	//bit [`ADDR_WIDTH-1:0]		prev_addr_in;
+	//bit [`DATA_WIDTH-1:0]		prev_wdata_in;
+	//bit [(`DATA_WIDTH/8)-1:0]	prev_strb_in;
+	
 	
 	//outputs to user from master
 	bit [`DATA_WIDTH-1:0]			rdata_out;
@@ -19,13 +24,26 @@ class apb_transaction;
 	//inputs from slave to master
 	rand bit [`DATA_WIDTH-1:0]		PRDATA;
 	rand bit 						PREADY, PSLVERR;
+	//bit [`DATA_WIDTH-1:0]		prev_PRDATA;
+	//bit 						prev_PREADY, prev_PSLVERR;
+	
+	static bit send;
+	static int count;
 	
 	constraint c1 {	transfer ==1;
 					write_read == 1;
 					PSLVERR == 0;
 					strb_in == 0;
-					PREADY == 1;
+					//PREADY == 1;
 					}
+					
+	/*constraint c2 { send -> transfer == prev_transfer &&
+							write_read == prev_write_read;
+							addr_in == prev_addr_in;
+							wdata_in == prev_wdata_in;
+							strb_in == prev_strb_in;	
+					}*/
+	
 	//constraint wr_rd_value {{write_enb,read_enb} inside {[0:3]};	}
 	//constraint wr_rd_ve { data_in != 0;	 						}
 	//constraint wr_rd_not_equal {{write_enb,read_enb} != 2'b11;	}
@@ -43,5 +61,13 @@ class apb_transaction;
 		copy.PSLVERR 	= this.PSLVERR;
 		return copy;
 	endfunction
+	
+	/*function void post_randomize();
+		prev_transfer = transfer;
+		prev_write_read = write_read;
+		prev_addr_in = addr_in;
+		prev_wdata_in = wdata_in;
+		prev_strb_in = strb_in;
+	endfunction*/
 
 endclass

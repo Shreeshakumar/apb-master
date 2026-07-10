@@ -1,18 +1,16 @@
 class apb_test; 
-  	virtual apb_inf vif_driver; 
-  	virtual apb_inf vif_monitor; 
-  	virtual apb_inf vif_reference; 
+  	virtual apb_inf.DRIVER drv; 
+  	virtual apb_inf.MONITOR mon;
 
   	apb_environment env; 
 	
-  	function new(virtual apb_inf vif_driver, virtual apb_inf vif_monitor, virtual apb_inf vif_reference ); 
-    	this.vif_driver = vif_driver; 
-    	this.vif_monitor = vif_monitor; 
-    	this.vif_reference = vif_reference; 
+  	function new(virtual apb_inf.DRIVER drv, virtual apb_inf.MONITOR mon ); 
+    	this.drv = drv; 
+    	this.mon = mon;
   	endfunction 
 
   	task run(); 
-     	env = new(vif_driver, vif_monitor, vif_reference ); 
+     	env = new(drv, mon ); 
      	env.build; 
      	env.start; 
   	endtask 

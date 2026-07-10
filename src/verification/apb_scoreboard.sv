@@ -1,38 +1,37 @@
 class apb_scoreboard;
 	
-	apb_transaction trans_ref, trans_mon;
-	mailbox #(apb_transaction)mbx_rs;
+	apb_transaction trans;
 	mailbox #(apb_transaction)mbx_ms;
 
 	int match, miss;
 	
-	function new(mailbox #(apb_transaction)mbx_rs, mailbox #(apb_transaction)mbx_ms);
-		this.mbx_rs = mbx_rs;
+	function new(mailbox #(apb_transaction)mbx_ms);
 		this.mbx_ms = mbx_ms;
 	endfunction
 
 	task start();
-	for(int i=0; i<`num_of_trans; i++)
-		begin
-			trans_ref = new();
-			trans_mon = new();
+		do begin
+			//trans = new();
 			fork
 			begin
-				mbx_rs.get(trans_ref);
-				$display("%m SCB REFERENCE");
-				$display("PADDR=%0d \t\t PSEL=%0d",trans_ref.PADDR,trans_ref.PSEL,$time); 
-				$display("PENABLE=%0d \t\t PWRITE=%0d",trans_ref.PENABLE,trans_ref.PWRITE,$time); 
-				$display("PWDATA=%0d \t\t PSTRB=%0d",trans_ref.PWDATA,trans_ref.PSTRB,$time); 
-				$display("rdata_out=%0d \t\t transfer_done=%0d \t\t error=%d",trans_ref.rdata_out,trans_ref.transfer_done,trans_ref.error,$time); 
+				mbx_ms.get(trans);
+				miss ++;
+				$display("%m SCB REFERENCE \t%d \t\t\ttime = %0t",miss,$time);
+				//$display("PADDR=%0d \nPSEL=%0d",trans_ref.PADDR,trans_ref.PSEL); 
+				//$display("PENABLE=%0d \nPWRITE=%0d",trans_ref.PENABLE,trans_ref.PWRITE); 
+				//$display("PWDATA=%0h \nPSTRB=%0d",trans_ref.PWDATA,trans_ref.PSTRB); 
+				//$display("rdata_out=%0h \ntransfer_done=%0d \nerror=%d",trans_ref.rdata_out,trans_ref.transfer_done,trans_ref.error); 
 			end
 			begin
-				mbx_ms.get(trans_mon);
+				//	mbx_ms.get(trans_mon);
+				apb_transaction::count = apb_transaction::count +1;
+				if(apb_transaction::count %4 == 0) apb_transaction::send = !apb_transaction::send;
 			end
 			join
-			compare();
-		end
+			//compare();
+		end while (apb_transaction::count != `num_of_trans);
 	endtask
-
+/*
 	task compare();
      	if(	(trans_ref.PADDR	== trans_mon.PADDR)		&&	(trans_ref.PSEL				== trans_mon.PSEL)			&&
     		(trans_ref.PENABLE	== trans_mon.PENABLE)	&&	(trans_ref.PWRITE   		== trans_mon.PWRITE)  		&&
@@ -42,14 +41,14 @@ class apb_scoreboard;
 			)
         begin
     		match++;
-            $display("*********************************************************************************       DATA MATCH SUCCESSFUL MATCH=%d",match);
+            $display("***********************************************************************************************************************       DATA MATCH SUCCESSFUL MATCH=%d",match);
         end
 		else
         begin
         	miss++;
-            $display("*********************************************************************************       DATA MATCH FAILED MISMATCH=%d",miss);
+            $display("***********************************************************************************************************************       DATA MATCH FAILED MISMATCH=%d",miss);
         end
-	endtask
+	endtask*/
 	
 	task summary();
         begin

@@ -52,3 +52,145 @@
 # transcript error: error writing "stdout": broken pipe
     while executing
 "puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# Current time Fri Jul 10 16:49:58 2026
+# Program = vish
+# Id = "10.6c"
+# Version = "2017.07"
+# Date = "Jul 25 2017"
+# Platform = linux
+# 0    0x085f648d: '<unknown (@0x85f648d)>'
+# 1    0x084f502b: 'TclInvokeStringCommand + 0x7b' in '/tools/mentor/questasim_10.6c/questasim/linux/vish'
+# 2    0x097a361b: '<unknown (@0x97a361b)>'
+# 3    0x09a57d63: '<unknown (@0x9a57d63)>'
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# Current time Fri Jul 10 20:44:07 2026
+# Program = vish
+# Id = "10.6c"
+# Version = "2017.07"
+# Date = "Jul 25 2017"
+# Platform = linux
+# 0    0x085f648d: '<unknown (@0x85f648d)>'
+# 1    0x084f502b: 'TclInvokeStringCommand + 0x7b' in '/tools/mentor/questasim_10.6c/questasim/linux/vish'
+# 2    0x09714ed3: '<unknown (@0x9714ed3)>'
+# 3    0x09a57e03: '<unknown (@0x9a57e03)>'
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# Current time Fri Jul 10 21:06:18 2026
+# Program = vish
+# Id = "10.6c"
+# Version = "2017.07"
+# Date = "Jul 25 2017"
+# Platform = linux
+# 0    0x085f648d: '<unknown (@0x85f648d)>'
+# 1    0x084f502b: 'TclInvokeStringCommand + 0x7b' in '/tools/mentor/questasim_10.6c/questasim/linux/vish'
+# 2    0x097cd44b: '<unknown (@0x97cd44b)>'
+# 3    0x09a57e03: '<unknown (@0x9a57e03)>'
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# Current time Fri Jul 10 22:33:36 2026
+# Program = vish
+# Id = "10.6c"
+# Version = "2017.07"
+# Date = "Jul 25 2017"
+# Platform = linux
+# 0    0x085f648d: '<unknown (@0x85f648d)>'
+# 1    0x084f502b: 'TclInvokeStringCommand + 0x7b' in '/tools/mentor/questasim_10.6c/questasim/linux/vish'
+# 2    0x09860dc3: '<unknown (@0x9860dc3)>'
+# 3    0x09a57e03: '<unknown (@0x9a57e03)>'
