@@ -4,16 +4,16 @@ class apb_environment;
 	virtual apb_inf.MONITOR vif_mon; 
 	virtual apb_inf.REFERENCE vif_ref; 
 
-	mailbox #(transaction) mbx_gd; 
-	mailbox #(transaction) mbx_dr; 
-	mailbox #(transaction) mbx_rs; 
-	mailbox #(transaction) mbx_ms; 
+	mailbox #(apb_transaction) mbx_gd; 
+	mailbox #(apb_transaction) mbx_dr; 
+	mailbox #(apb_transaction) mbx_rs; 
+	mailbox #(apb_transaction) mbx_ms; 
 
-	generator		gen;
-	driver			drv; 
-	monitor         mon; 
-	reference_model	reff; 
-	scoreboard 		scb; 
+	apb_generator		gen;
+	apb_driver			drv; 
+	apb_monitor         mon; 
+	apb_reference_model	reff; 
+	apb_scoreboard 		scb; 
 
 	function new (virtual apb_inf vif_drv, virtual apb_inf vif_mon, virtual apb_inf vif_ref ); 
 		this.vif_drv = vif_drv; 

@@ -17,7 +17,9 @@ s/ERROR/\e[1;31m$$&\e[0m/g; \
 s/Warning/\e[1;33m$$&\e[0m/g; \
 s/WARNING/\e[1;33m$$&\e[0m/g; \
 s/Fatal/\e[1;35m$$&\e[0m/g; \
-s/FATAL/\e[1;35m$$&\e[0m/g;'
+s/FATAL/\e[1;35m$$&\e[0m/g; \
+s/shreeshakumar/\e[1;31m$$&\e[0m/g; \
+s/shreeshakumar/\e[1;31m$$&\e[0m/g;'
 
 .ONESHELL:	
 all:
@@ -32,7 +34,7 @@ com:
 	vlog -sv +acc +cover +fcover -l src/simulation/log_file.log src/verification/apb_top.sv |& $(COLORIZE)
 	
 sim:
-	@echo "\t\t\t\t$(GREEN)................................................... SIMULATING TEST = $(TEST) ...................................................$(RESET)"
+	@echo "\t\t\t\t$(CYAN)................................................... SIMULATING TEST = $(TEST) ...................................................$(RESET)"
 	source $(QUESTA)
 	vsim -vopt work.apb_top -voptargs=+acc=npr -assertdebug -l src/simulation/log_file.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll src/simulation/ucdb_file.ucdb; run -all; exit" |& $(COLORIZE)
 
@@ -47,4 +49,7 @@ pu:
 	git commit -m 'commiting'
 	git push |& $(COLORIZE)
 
-
+check:
+	@echo "\t\t\t\t$(CYAN)........................................................ CHECKING SERVER USERS .....................................................$(RESET)"
+	source $(QUESTA)
+	lmstat -A |& $(COLORIZE)

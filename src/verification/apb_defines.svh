@@ -1,7 +1,7 @@
-`define ADDR_WIDTH 5
-`define DATA_WIDTH 8
+`define ADDR_WIDTH 32
+`define DATA_WIDTH 32
 
-`define num_of_trans 10
+`define num_of_trans 50
 
 function int log2(input num);
 begin

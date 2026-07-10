@@ -4,6 +4,8 @@ class apb_driver;
 	mailbox#(apb_transaction)mbx_gd;
 	mailbox#(apb_transaction)mbx_dr;
 	virtual apb_inf.DRIVER vif;
+	
+	bit rst;
 
 	function new( mailbox#(apb_transaction)mbx_gd, mailbox#(apb_transaction)mbx_dr, virtual apb_inf.DRIVER vif );
 		this.mbx_gd = mbx_gd;
@@ -11,14 +13,15 @@ class apb_driver;
 		this.vif = vif;
 	endfunction
 
-	function start();
+	task start();
 		repeat(4) @(vif.cb_driver);
 		for(int i =0; i<`num_of_trans; i++)
 		begin
-			$display("%m Driver ran at iteration %0d",i);
+			$display("\n%m Driver ran at iteration %0d\t\t\t\ttime = %0t",i,$time);
 			$display("STARTING DRIVER TRASANCTION");
 			trans = new();
 			mbx_gd.get(trans);
+			rst = vif.cb_driver.PRESETn ;
 			if(vif.cb_driver.PRESETn == 0)
 			begin
 				trans.transfer <= 0;
@@ -38,7 +41,8 @@ class apb_driver;
 				mbx_dr.put(trans);
 				@(vif.cb_driver);
 			end
-			$display("******** driver_sending **********");
+			$display("******** driver_sending time= %0t **********",$time);
+			if(!rst) begin repeat(8) $write("\tRESET"); $display(); end
 			$display("transfer   = %0d",trans.transfer);
 			$display("write_read = %0d",trans.write_read);
 			$display("addr_in    = %0d",trans.addr_in);
@@ -46,8 +50,8 @@ class apb_driver;
 			$display("PRDATA     = %0d",trans.PRDATA);
 			$display("PREADY     = %0d",trans.PREADY);
 			$display("PSLVERR    = %0d",trans.PSLVERR);
-			$display("*********************************");
+			$display("********************************************");
 		end
-	endfunction
+	endtask
 
 endclass

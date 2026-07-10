@@ -20,6 +20,12 @@ class apb_transaction;
 	rand bit [`DATA_WIDTH-1:0]		PRDATA;
 	rand bit 						PREADY, PSLVERR;
 	
+	constraint c1 {	transfer ==1;
+					write_read == 1;
+					PSLVERR == 0;
+					strb_in == 0;
+					PREADY == 1;
+					}
 	//constraint wr_rd_value {{write_enb,read_enb} inside {[0:3]};	}
 	//constraint wr_rd_ve { data_in != 0;	 						}
 	//constraint wr_rd_not_equal {{write_enb,read_enb} != 2'b11;	}

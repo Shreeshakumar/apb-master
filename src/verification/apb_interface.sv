@@ -44,12 +44,12 @@ interface apb_inf(input logic PCLK,PRESETn);
 				
 		endclocking
 
-		clocking cb_monitor@(posedge clk);
+		clocking cb_monitor@(posedge PCLK);
 			default input #0 output #0;
 			input transfer, write_read, addr_in, wdata_in, strb_in;
 			input rdata_out, transfer_done, error;
 			input PADDR, PSEL, PENABLE, PWRITE, PWDATA, PSTRB;
-			input PRDATA, PREADY, PLVERR;
+			input PRDATA, PREADY, PSLVERR;
 
 			input PRESETn;
 			

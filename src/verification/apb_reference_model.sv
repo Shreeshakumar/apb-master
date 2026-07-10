@@ -23,7 +23,7 @@ class apb_reference_model;
 				trans.PADDR 		= trans.addr_in;
 				trans.PSEL 			= 0;
 				trans.PENABLE 		= 0;
-				trans.PWRITE 		= trans.read_write;
+				trans.PWRITE 		= trans.write_read;
 				trans.PWDATA 		= trans.wdata_in;
 				trans.PSTRB 		= trans.strb_in;
 
@@ -42,7 +42,7 @@ class apb_reference_model;
 						trans.PSEL 		= 1;
 						trans.PENABLE 	= 0;
 						trans.PADDR		=trans.addr_in;
-						trans.PWRITE	=trans.read_write;
+						trans.PWRITE	=trans.write_read;
 						trans.PWDATA	=trans.wdata_in;
 						trans.PSTRB		=trans.strb_in;
 					
@@ -56,12 +56,12 @@ class apb_reference_model;
 						trans.PENABLE 	= 0;
 						trans.rdata_out 	= trans.PRDATA;
 						trans.transfer_done = 1;
-						trans.error 		= PSLVERR;
+						trans.error 		= trans.PSLVERR;
 				end
 			end
 		end
 
-		endfunction
+		endtask
 endclass
 
 						

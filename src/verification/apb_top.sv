@@ -13,8 +13,8 @@ module apb_top();
   	initial forever #10 PCLK = ~PCLK; // Period is 20ns --> Frequency is 50Mhz 
   
   	initial begin 
-  	repeat(2) @(posedge PCLK);
-    PRESETn = 0;
+  	//repeat(2) @(posedge PCLK);
+    PRESETn = 1;
     repeat(4) @(posedge PCLK);
     //repeat(40) @(posedge PCLK);
     PRESETn = 1;
