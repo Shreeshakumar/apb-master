@@ -43,7 +43,7 @@ cov:
 	
 pu:
 	@echo "\t\t\t\t$(GREEN)....................................................... PUSHING TO GIT REPO ......................................................$(RESET)"
-	git add .
+	git add --all
 	git commit -m 'commiting'
 	git push |& $(COLORIZE)
 
