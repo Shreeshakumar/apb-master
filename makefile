@@ -27,22 +27,22 @@ all:
 	make pu
 
 com:
-	@echo "\t\t\t\t........................................................ COMPILING CODE ........................................................."
+	@echo "\t\t\t\t$(RED)........................................................ COMPILING CODE .........................................................$(RESET)"
 	source $(QUESTA)
 	vlog -sv +acc +cover +fcover -l src/simulation/log_file.log src/verification/apb_top.sv |& $(COLORIZE)
-
+	
 sim:
-	@echo "\t\t\t\t................................................... SIMULATING TEST = $(TEST) ..................................................."
+	@echo "\t\t\t\t$(GREEN)................................................... SIMULATING TEST = $(TEST) ...................................................$(RESET)"
 	source $(QUESTA)
 	vsim -vopt work.apb_top -voptargs=+acc=npr -assertdebug -l src/simulation/log_file.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll src/simulation/ucdb_file.ucdb; run -all; exit" |& $(COLORIZE)
 
 cov:
-	@echo "\t\t\t\t.................................................... CREATING COVERAGE REPORT ..................................................."
+	@echo "\t\t\t\t$(MAGENTA).................................................... CREATING COVERAGE REPORT ...................................................$(RESET)"
 	source $(QUESTA)
 	vcover report -html src/simulation/ucdb_file.ucdb -htmldir src/simulation/covReport -details |& $(COLORIZE)
 	
 pu:
-	@echo "\t\t\t\t....................................................... PUSHING TO GIT REPO ......................................................"
+	@echo "\t\t\t\t$(GREEN)....................................................... PUSHING TO GIT REPO ......................................................$(RESET)"
 	git add .
 	git commit -m 'commiting'
 	git push |& $(COLORIZE)
