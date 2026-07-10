@@ -1,6 +1,6 @@
 # vsim -vopt work.apb_top -voptargs="+acc=npr" -assertdebug -l src/simulation/log_file.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll src/simulation/ucdb_file.ucdb; run -all; exit" 
-# Start time: 23:52:58 on Jul 10,2026
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Start time: 02:00:50 on Jul 11,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt5
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
 # //
@@ -25,38 +25,54 @@
 #  run -all
 # 
 # GENERATOR randomized 0 				time =0
+# tula 0
 # transfer=1, write_read=1, addr_in=153, wdata_in=a7bf7cdf, strb_in =0
 # PRDATA=10f8cea6, PREADY=0, PSLVERR=0
 # 
 # GENERATOR randomized 1 				time =0
-# transfer=1, write_read=1, addr_in= 86, wdata_in=42c8d007, strb_in =0
-# PRDATA=2cc6144f, PREADY=0, PSLVERR=0
+# tula 1
+# transfer=1, write_read=1, addr_in=153, wdata_in=a7bf7cdf, strb_in =0
+# PRDATA=2cc6144f, PREADY=1, PSLVERR=0
 # 
 # GENERATOR randomized 2 				time =0
+# tula 0
 # transfer=1, write_read=1, addr_in= 80, wdata_in=dcad23a9, strb_in =0
-# PRDATA=56d7f69f, PREADY=1, PSLVERR=0
+# PRDATA=56d7f69f, PREADY=0, PSLVERR=0
 # 
 # GENERATOR randomized 3 				time =0
-# transfer=1, write_read=1, addr_in=253, wdata_in=43549a6f, strb_in =0
-# PRDATA=adb13787, PREADY=0, PSLVERR=0
+# tula 1
+# transfer=1, write_read=1, addr_in= 80, wdata_in=dcad23a9, strb_in =0
+# PRDATA=adb13787, PREADY=1, PSLVERR=0
 # 
 # GENERATOR randomized 4 				time =0
+# tula 0
 # transfer=1, write_read=1, addr_in=145, wdata_in=2c5774ea, strb_in =0
 # PRDATA=9592a3d, PREADY=0, PSLVERR=0
 # 
-# apb_package.apb_driver.start Driver ran at iteration 0		time = 25
-# STARTING DRIVER TRASANCTION
-# ********************************************************************************************************************************
-# ******** driver_sending time= 25 **********
-# transfer   = 1
-# write_read = 1
-# addr_in    = 'h99
-# wdata_in   = 'ha7bf7cdf
-# strb_in    = 'h0
-# PRDATA     = 'h10f8cea6
-# PREADY     = 0
-# PSLVERR    = 0
-# *********************************
+# GENERATOR randomized 5 				time =0
+# tula 1
+# transfer=1, write_read=1, addr_in=145, wdata_in=2c5774ea, strb_in =0
+# PRDATA=ae737d04, PREADY=1, PSLVERR=0
+# 
+# GENERATOR randomized 6 				time =0
+# tula 0
+# transfer=0, write_read=1, addr_in= 58, wdata_in=1ea1347c, strb_in =0
+# PRDATA=a6f9cc7d, PREADY=0, PSLVERR=0
+# 
+# GENERATOR randomized 7 				time =0
+# tula 1
+# transfer=0, write_read=1, addr_in= 58, wdata_in=1ea1347c, strb_in =0
+# PRDATA=a621c816, PREADY=1, PSLVERR=0
+# 
+# GENERATOR randomized 8 				time =0
+# tula 0
+# transfer=1, write_read=1, addr_in=159, wdata_in=941d61a, strb_in =0
+# PRDATA=83410a23, PREADY=0, PSLVERR=0
+# 
+# GENERATOR randomized 9 				time =0
+# tula 1
+# transfer=1, write_read=1, addr_in=159, wdata_in=941d61a, strb_in =0
+# PRDATA=9b6a873e, PREADY=0, PSLVERR=0
 # 
 # apb_package.apb_monitor.start MONITOR					time =25
 # ***** INPUTS*****
@@ -79,6 +95,12 @@
 # rdata_out     = 'h0 
 # transfer_done = 0 
 # error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	          1 			time = 25
+# tual 0
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MATCH=          1
+# 
+# apb_package.apb_driver.start Driver ran at iteration 0		time = 35
+# STARTING DRIVER TRASANCTION
 # 
 # apb_package.apb_monitor.start MONITOR					time =35
 # ***** INPUTS*****
@@ -101,6 +123,9 @@
 # rdata_out     = 'h0 
 # transfer_done = 0 
 # error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	          2 			time = 35
+# tual 0
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MATCH=          2
 # 
 # apb_package.apb_monitor.start MONITOR					time =45
 # ***** INPUTS*****
@@ -123,6 +148,12 @@
 # rdata_out     = 'h0 
 # transfer_done = 0 
 # error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	          3 			time = 45
+# tual 0
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MATCH=          3
+# 
+# apb_package.apb_driver.start Driver ran at iteration 0		time = 55
+# STARTING DRIVER TRASANCTION
 # 
 # apb_package.apb_monitor.start MONITOR					time =55
 # ***** INPUTS*****
@@ -131,8 +162,8 @@
 # addr_in       = 'h99
 # wdata_in      = 'ha7bf7cdf
 # strb_in       = 'h0
-# PRDATA        = 'h10f8cea6
-# PREADY        = 0
+# PRDATA        = 'h2cc6144f
+# PREADY        = 1
 # PSLVERR       = 0 
 # 
 # ****** OUTPUTS ******
@@ -145,6 +176,9 @@
 # rdata_out     = 'h0 
 # transfer_done = 0 
 # error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	          4 			time = 55
+# tual 0
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MATCH=          4
 # 
 # apb_package.apb_monitor.start MONITOR					time =65
 # ***** INPUTS*****
@@ -153,29 +187,60 @@
 # addr_in       = 'h99
 # wdata_in      = 'ha7bf7cdf
 # strb_in       = 'h0
-# PRDATA        = 'h10f8cea6
-# PREADY        = 0
+# PRDATA        = 'h2cc6144f
+# PREADY        = 1
 # PSLVERR       = 0 
 # 
 # ****** OUTPUTS ******
 # PADDR         = 'h99 
-# PSEL          = 1
-# PENABLE       = 1 
+# PSEL          = 0
+# PENABLE       = 0 
 # PWRITE        = 1
 # PWDATA        = 'ha7bf7cdf 
 # PSTRB         = 'h0
 # rdata_out     = 'h0 
-# transfer_done = 0 
+# transfer_done = 1 
 # error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	          5 			time = 65
+# tual 1
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MISSMATCH=          6
+# 
+# apb_package.apb_driver.start Driver ran at iteration 1		time = 75
+# STARTING DRIVER TRASANCTION
 # 
 # apb_package.apb_monitor.start MONITOR					time =75
 # ***** INPUTS*****
 # transfer      = 1
 # write_read    = 1
-# addr_in       = 'h99
-# wdata_in      = 'ha7bf7cdf
+# addr_in       = 'h50
+# wdata_in      = 'hdcad23a9
 # strb_in       = 'h0
-# PRDATA        = 'h10f8cea6
+# PRDATA        = 'h56d7f69f
+# PREADY        = 0
+# PSLVERR       = 0 
+# 
+# ****** OUTPUTS ******
+# PADDR         = 'h99 
+# PSEL          = 1
+# PENABLE       = 0 
+# PWRITE        = 1
+# PWDATA        = 'ha7bf7cdf 
+# PSTRB         = 'h0
+# rdata_out     = 'h0 
+# transfer_done = 0 
+# error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	          7 			time = 75
+# tual 0
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MISSMATCH=          8
+# 
+# apb_package.apb_monitor.start MONITOR					time =85
+# ***** INPUTS*****
+# transfer      = 1
+# write_read    = 1
+# addr_in       = 'h50
+# wdata_in      = 'hdcad23a9
+# strb_in       = 'h0
+# PRDATA        = 'h56d7f69f
 # PREADY        = 0
 # PSLVERR       = 0 
 # 
@@ -189,8 +254,95 @@
 # rdata_out     = 'h0 
 # transfer_done = 0 
 # error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	          9 			time = 85
+# tual 0
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MATCH=          5
+# 
+# apb_package.apb_driver.start Driver ran at iteration 1		time = 95
+# STARTING DRIVER TRASANCTION
+# 
+# apb_package.apb_monitor.start MONITOR					time =95
+# ***** INPUTS*****
+# transfer      = 1
+# write_read    = 1
+# addr_in       = 'h50
+# wdata_in      = 'hdcad23a9
+# strb_in       = 'h0
+# PRDATA        = 'hadb13787
+# PREADY        = 1
+# PSLVERR       = 0 
+# 
+# ****** OUTPUTS ******
+# PADDR         = 'h99 
+# PSEL          = 1
+# PENABLE       = 1 
+# PWRITE        = 1
+# PWDATA        = 'ha7bf7cdf 
+# PSTRB         = 'h0
+# rdata_out     = 'h0 
+# transfer_done = 0 
+# error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	         10 			time = 95
+# tual 0
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MATCH=          6
+# 
+# apb_package.apb_monitor.start MONITOR					time =105
+# ***** INPUTS*****
+# transfer      = 1
+# write_read    = 1
+# addr_in       = 'h50
+# wdata_in      = 'hdcad23a9
+# strb_in       = 'h0
+# PRDATA        = 'hadb13787
+# PREADY        = 1
+# PSLVERR       = 0 
+# 
+# ****** OUTPUTS ******
+# PADDR         = 'h99 
+# PSEL          = 0
+# PENABLE       = 0 
+# PWRITE        = 1
+# PWDATA        = 'ha7bf7cdf 
+# PSTRB         = 'h0
+# rdata_out     = 'h0 
+# transfer_done = 1 
+# error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	         11 			time = 105
+# tual 1
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MISSMATCH=         12
+# 
+# apb_package.apb_driver.start Driver ran at iteration 2		time = 115
+# STARTING DRIVER TRASANCTION
+# 
+# apb_package.apb_monitor.start MONITOR					time =115
+# ***** INPUTS*****
+# transfer      = 1
+# write_read    = 1
+# addr_in       = 'h91
+# wdata_in      = 'h2c5774ea
+# strb_in       = 'h0
+# PRDATA        = 'h9592a3d
+# PREADY        = 0
+# PSLVERR       = 0 
+# 
+# ****** OUTPUTS ******
+# PADDR         = 'h99 
+# PSEL          = 1
+# PENABLE       = 0 
+# PWRITE        = 1
+# PWDATA        = 'ha7bf7cdf 
+# PSTRB         = 'h0
+# rdata_out     = 'h0 
+# transfer_done = 0 
+# error         = 0
+# apb_package.apb_scoreboard.start SCB REFERENCE 	         13 			time = 115
+# tual 0
+# ***************************************************************************************************       DATA MATCH SUCCESSFUL MISSMATCH=         14
+# 
+# apb_package.apb_driver.start Driver ran at iteration 2		time = 135
+# STARTING DRIVER TRASANCTION
 # ** Note: $finish    : src/verification/apb_top.sv(46)
-#    Time: 80 ns  Iteration: 0  Instance: /apb_top
+#    Time: 5 us  Iteration: 0  Instance: /apb_top
 # Saving coverage database on exit...
-# End time: 23:52:59 on Jul 10,2026, Elapsed time: 0:00:01
+# End time: 02:00:51 on Jul 11,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

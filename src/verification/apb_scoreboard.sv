@@ -1,9 +1,10 @@
 class apb_scoreboard;
 	
-	apb_transaction trans;
+	apb_transaction tt;
 	mailbox #(apb_transaction)mbx_ms;
 
 	int match, miss;
+	int comp, cnt;
 	
 	function new(mailbox #(apb_transaction)mbx_ms);
 		this.mbx_ms = mbx_ms;
@@ -11,51 +12,51 @@ class apb_scoreboard;
 
 	task start();
 		do begin
-			//trans = new();
-			fork
-			begin
-				mbx_ms.get(trans);
-				miss ++;
-				$display("%m SCB REFERENCE \t%d \t\t\ttime = %0t",miss,$time);
-				//$display("PADDR=%0d \nPSEL=%0d",trans_ref.PADDR,trans_ref.PSEL); 
-				//$display("PENABLE=%0d \nPWRITE=%0d",trans_ref.PENABLE,trans_ref.PWRITE); 
-				//$display("PWDATA=%0h \nPSTRB=%0d",trans_ref.PWDATA,trans_ref.PSTRB); 
-				//$display("rdata_out=%0h \ntransfer_done=%0d \nerror=%d",trans_ref.rdata_out,trans_ref.transfer_done,trans_ref.error); 
-			end
-			begin
-				//	mbx_ms.get(trans_mon);
-				apb_transaction::count = apb_transaction::count +1;
-				$display("********************************************************************************    apb_transaction::count = %d",apb_transaction::count);
-				if(apb_transaction::count %4 == 0) apb_transaction::send = !apb_transaction::send;
-			end
-			join
+			tt = new();
+			mbx_ms.get(tt);
+			miss ++;
+			$display("%m SCB REFERENCE \t%d \t\t\ttime = %0t",miss,$time);
 			//compare();
-		end while (apb_transaction::count != `num_of_trans);
+			//$display("********************************************************    apb_transaction::count =%d\t%d",apb_transaction::count,apb_transaction::send);
+			cnt++;
+			apb_transaction::count = apb_transaction::count +1;
+			$display("tual %d",tt.transfer_done);
+			if(tt.PREADY) tt.send = !tt.send;
+			if(tt.transfer_done) cnt = 0;
+			compare();
+		end while (apb_transaction::count <= `num_of_trans*2);
 	endtask
-/*
+
+
+
 	task compare();
-     	if(	(trans_ref.PADDR	== trans_mon.PADDR)		&&	(trans_ref.PSEL				== trans_mon.PSEL)			&&
-    		(trans_ref.PENABLE	== trans_mon.PENABLE)	&&	(trans_ref.PWRITE   		== trans_mon.PWRITE)  		&&
-    		(trans_ref.PWDATA   == trans_mon.PWDATA)    &&	(trans_ref.PSTRB   			== trans_mon.PSTRB)    		&&
-    		(trans_ref.rdata_out == trans_mon.rdata_out)  &&	(trans_ref.transfer_done 	== trans_mon.transfer_done) &&
-    		(trans_ref.error    == trans_mon.error)
-			)
-        begin
-    		match++;
-            $display("***********************************************************************************************************************       DATA MATCH SUCCESSFUL MATCH=%d",match);
-        end
-		else
-        begin
-        	miss++;
-            $display("***********************************************************************************************************************       DATA MATCH FAILED MISMATCH=%d",miss);
-        end
-	endtask*/
+		comp = 1;
+		if(tt.transfer && cnt == 0)
+     	if(!(!tt.PADDR && !tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDATA && !tt.PSTRB && !tt.rdata_out && !tt.transfer_done && !tt.error))
+     		comp = 0;
+     	
+     	if(tt.transfer && cnt == 1 && tt.write_read)
+     	if(!(tt.PADDR && tt.PSEL && !tt.PENABLE && !tt.PWRITE && !tt.PWDATA && !tt.PSTRB && !tt.rdata_out && !tt.transfer_done && !tt.error))
+     		comp = 0;
+     		
+     	if(tt.transfer && cnt == 1 && tt.write_read && tt.PREADY)
+     	if(!(!tt.PADDR==tt.addr_in && tt.PSEL && tt.PENABLE && tt.PWRITE && tt.PWDATA==tt.wdata_in && tt.PSTRB==tt.strb_in && !tt.rdata_out && !tt.transfer_done && !tt.error))
+     		comp = 0;
+     		
+     	if (comp) 	begin	match++	;
+     	$display("***************************************************************************************************       DATA MATCH SUCCESSFUL MATCH=%d",match);
+     	end
+     	else 	begin	miss++;
+     	$display("***************************************************************************************************       DATA MATCH SUCCESSFUL MISSMATCH=%d",miss);
+     	end	
+   
+	endtask
 	
 	task summary();
         begin
-            $display("*************************************************************************************************************************************");
-            $display("****************     TOTAL MATCH = %0d        ***************************************    TOTAL MISMATCH = %0d    ***********************",match,miss);
-            $display("*************************************************************************************************************************************");
+            $display("**********************************************************************************************************************************");
+            $display("****************     TOTAL MATCH = %0d        *******************************    TOTAL MISMATCH = %0d    ***********************",match,miss);
+            $display("**********************************************************************************************************************************");
         end
 	endtask
 

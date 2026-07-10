@@ -42,7 +42,7 @@ module apb_top();
 	end 
 	
 	initial begin 
-		#80;
+		#1000;#1000;#1000;#1000;#1000;
 		$finish;
 	end 
 

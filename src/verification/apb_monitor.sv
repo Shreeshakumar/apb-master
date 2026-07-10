@@ -49,7 +49,7 @@ class apb_monitor;
 			$display("rdata_out     = 'h%0h \ntransfer_done = %0d \nerror         = %d",trans.rdata_out,trans.transfer_done,trans.error); 
 			mbx_ms.put(trans);
 			@(vif.cb_monitor);
-   		end while (apb_transaction::count != `num_of_trans);
+   		end while (apb_transaction::count != `num_of_trans*2);
 	endtask
 	
 endclass

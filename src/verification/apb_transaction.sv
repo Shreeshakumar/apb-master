@@ -5,10 +5,10 @@ class apb_transaction;
 	rand bit [`ADDR_WIDTH-1:0]		addr_in;
 	rand bit [`DATA_WIDTH-1:0]		wdata_in;
 	rand bit [(`DATA_WIDTH/8)-1:0]	strb_in;
-	//bit 						prev_transfer, prev_write_read;
-	//bit [`ADDR_WIDTH-1:0]		prev_addr_in;
-	//bit [`DATA_WIDTH-1:0]		prev_wdata_in;
-	//bit [(`DATA_WIDTH/8)-1:0]	prev_strb_in;
+	bit 						prev_transfer, prev_write_read;
+	bit [`ADDR_WIDTH-1:0]		prev_addr_in;
+	bit [`DATA_WIDTH-1:0]		prev_wdata_in;
+	bit [(`DATA_WIDTH/8)-1:0]	prev_strb_in;
 	
 	
 	//outputs to user from master
@@ -30,19 +30,24 @@ class apb_transaction;
 	static bit send;
 	static int count;
 	
-	constraint c1 {	transfer ==1;
+	static bit second_send = 1;
+	
+	constraint c1 {	//transfer ==1;
 					write_read == 1;
-					PSLVERR == 0;
+					//PSLVERR == 0;
 					strb_in == 0;
 					//PREADY == 1;
 					}
 					
-	/*constraint c2 { send -> transfer == prev_transfer &&
-							write_read == prev_write_read;
-							addr_in == prev_addr_in;
-							wdata_in == prev_wdata_in;
-							strb_in == prev_strb_in;	
-					}*/
+	constraint c2 { second_send  ->   	PREADY == 0;
+					!second_send -> 	(transfer == prev_transfer &&
+										addr_in == prev_addr_in  &&
+										wdata_in == prev_wdata_in); 
+					
+					!second_send && PREADY dist {0:/15, 1:/85};
+									
+						PSLVERR == 0;	
+					}
 	
 	//constraint wr_rd_value {{write_enb,read_enb} inside {[0:3]};	}
 	//constraint wr_rd_ve { data_in != 0;	 						}
@@ -62,12 +67,13 @@ class apb_transaction;
 		return copy;
 	endfunction
 	
-	/*function void post_randomize();
+	function void post_randomize();
+		second_send = !second_send;
 		prev_transfer = transfer;
 		prev_write_read = write_read;
 		prev_addr_in = addr_in;
 		prev_wdata_in = wdata_in;
 		prev_strb_in = strb_in;
-	endfunction*/
+	endfunction
 
 endclass
