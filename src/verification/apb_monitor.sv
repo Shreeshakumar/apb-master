@@ -10,7 +10,7 @@ class apb_monitor;
 	endfunction
 
 	task start();
-		repeat(3) @(vif.cb_monitor);
+		repeat(4) @(vif.cb_monitor);
 		do begin
 			trans = new();
 			trans.transfer    = vif.cb_monitor.transfer;
@@ -34,23 +34,14 @@ class apb_monitor;
 			trans.transfer_done = vif.cb_monitor.transfer_done;
 			trans.error = vif.cb_monitor.error;
 
-			$display("\n%m MONITOR\t\t\t\t\ttime =%0t",$time);
-			$display("***** INPUTS*****\ntransfer      = %0d",trans.transfer);
-			$display("write_read    = %0d",trans.write_read);
-			$display("addr_in       = 'h%0h",trans.addr_in);
-			$display("wdata_in      = 'h%0h",trans.wdata_in);
-			$display("strb_in       = 'h%0h",trans.strb_in);
-			$display("PRDATA        = 'h%0h",trans.PRDATA);
-			$display("PREADY        = %0d",trans.PREADY);
-			$display("PSLVERR       = %0d \n",trans.PSLVERR);
-			$display("****** OUTPUTS ******\nPADDR         = 'h%0h \nPSEL          = %0d",trans.PADDR,trans.PSEL); 
-			$display("PENABLE       = %0d \nPWRITE        = %0d",trans.PENABLE,trans.PWRITE); 
-			$display("PWDATA        = 'h%0h \nPSTRB         = 'h%0h",trans.PWDATA,trans.PSTRB); 
-			$display("rdata_out     = 'h%0h \ntransfer_done = %0d \nerror         = %d",trans.rdata_out,trans.transfer_done,trans.error); 
+			$display("%m MONITOR\t\t\t\t\ttime =%0t",$time);
+			trans.display();
 			mbx_ms.put(trans);
+			apb_transaction::count = apb_transaction::count +1;
 			@(vif.cb_monitor);
-   		end while (apb_transaction::count <= (`num_of_trans*4)+2);
-   		$finish;
+   		end while (apb_transaction::count <= (`num_of_trans*4)+1);
+		apb_transaction::summary = 1;
+   		$display("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 	endtask
 	
 endclass
