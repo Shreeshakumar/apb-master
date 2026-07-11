@@ -37,7 +37,9 @@ The verification environment follows a reusable SystemVerilog class-based archit
 <p align="center">
   <img src="docs/images/testbench_architecture.png" alt="APB Testbench Architecture" width="850">
 </p>
-
+<p align="center">
+  <img src="docs/images/apb_dmm.png" alt="APB DRIVER DUV MONITOR" width="850">
+</p>
 ---
 
 # Directory Structure
