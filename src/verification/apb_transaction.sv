@@ -33,20 +33,21 @@ class apb_transaction;
 	static bit second_send = 1;
 	
 	constraint c1 {	//transfer ==1;
-					write_read == 1;
-					//PSLVERR == 0;
-					strb_in == 0;
+					//write_read == 1;
+					PSLVERR == 0;
+					//strb_in == 0;
 					//PREADY == 1;
 					}
 					
 	constraint c2 { second_send  ->   	PREADY == 0;
 					!second_send -> 	(transfer == prev_transfer &&
+										write_read == prev_write_read &&
 										addr_in == prev_addr_in  &&
 										wdata_in == prev_wdata_in); 
 					
 					!second_send ->  PREADY dist {0:/0, 1:/85};
 									
-						PSLVERR == 0;	
+						//PSLVERR == 0;	
 					}
 	
 	//constraint wr_rd_value {{write_enb,read_enb} inside {[0:3]};	}

@@ -34,7 +34,7 @@ class apb_scoreboard;
      	if(tt.transfer && cnt == 2 && tt.write_read)	if(!(tt.PSEL && !tt.PENABLE))	begin comp = 0; $display("cnt 2 error"); end
      		
      	if(tt.transfer && cnt == 3 && tt.write_read && tt.PREADY)
-     	if(!(tt.PADDR==tt.addr_in && tt.PSEL && tt.PENABLE && tt.PWRITE && tt.PWDATA==tt.wdata_in && tt.PSTRB==tt.strb_in && !tt.rdata_out && !tt.transfer_done && !tt.error))
+     	if(!(tt.PADDR==tt.addr_in && tt.PSEL && tt.PENABLE && tt.PWRITE && tt.PWDATA==tt.wdata_in && tt.PSTRB==tt.strb_in && tt.rdata_out==tt.PRDATA && !tt.transfer_done && tt.error==tt.PSLVERR))
      		begin comp = 0; $display("cnt 3 and PREADY error"); end
      		
      	if(tt.transfer && cnt ==4)
