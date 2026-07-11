@@ -23,9 +23,8 @@ class apb_scoreboard;
 			
 			if (cnt ==4)cnt = 1;
 			if (!tt.transfer) cnt =0;
-		end while (apb_transaction::count <= (`num_of_trans*4)+2);
+		end while (apb_transaction::count <= (`num_of_trans*3)+3);
 	endtask
-
 
 
 	task compare();

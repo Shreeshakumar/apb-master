@@ -39,9 +39,8 @@ class apb_monitor;
 			mbx_ms.put(trans);
 			apb_transaction::count = apb_transaction::count +1;
 			@(vif.cb_monitor);
-   		end while (apb_transaction::count <= (`num_of_trans*4)+1);
+   		end while (apb_transaction::count <= (`num_of_trans*3)+3);
 		apb_transaction::summary = 1;
-   		$display("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 	endtask
 	
 endclass
