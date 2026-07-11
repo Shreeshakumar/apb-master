@@ -44,7 +44,7 @@ class apb_transaction;
 										addr_in == prev_addr_in  &&
 										wdata_in == prev_wdata_in); 
 					
-					!second_send && PREADY dist {0:/15, 1:/85};
+					!second_send ->  PREADY dist {0:/0, 1:/85};
 									
 						PSLVERR == 0;	
 					}
@@ -74,6 +74,22 @@ class apb_transaction;
 		prev_addr_in = addr_in;
 		prev_wdata_in = wdata_in;
 		prev_strb_in = strb_in;
+	endfunction
+	
+	function void display();
+			$display("\n========================================================================================");
+         	$display("INPUT", "VALUE", "OUTPUT", "VALUE");
+			$display("----------------------------------------------------------------------------------------");
+			$display("%-24s %-20d | %-24s 'h%0h","transfer", transfer,"PADDR", PADDR);
+			$display("%-24s %-20d | %-24s %0d","write_read", write_read,"PSEL", PSEL);
+			$display("%-24s 'h%-17h | %-24s %0d","addr_in", addr_in,"PENABLE", PENABLE);
+			$display("%-24s 'h%-17h | %-24s %0d","wdata_in", wdata_in,"PWRITE", PWRITE);
+			$display("%-24s 'h%-17h | %-24s 'h%0h","strb_in", strb_in,"PWDATA", PWDATA);
+			$display("%-24s 'h%-17h | %-24s 'h%0h","PRDATA", PRDATA,"PSTRB", PSTRB);
+			$display("%-24s %-20d | %-24s 'h%0h","PREADY", PREADY,"rdata_out", rdata_out);
+			$display("%-24s %-20d | %-24s %0d","PSLVERR", PSLVERR,"transfer_done", transfer_done);
+			$display("%-24s %-20s | %-24s %0d","", "","error", error);
+			$display("========================================================================================\n");
 	endfunction
 
 endclass

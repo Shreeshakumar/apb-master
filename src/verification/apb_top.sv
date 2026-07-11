@@ -42,7 +42,8 @@ module apb_top();
 	end 
 	
 	initial begin 
-		#1000;#1000;#1000;#1000;#1000;
+		#300;
+	$display("xzvzsv",$time);
 		$finish;
 	end 
 
