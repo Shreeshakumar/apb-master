@@ -79,27 +79,42 @@ apb_master/
 
 ---
 
-# Running the Simulation (QuestaSim)
+## Running the Simulation (Using Makefile)
 
-Compile the design and verification environment:
-
-```bash
-vlog -sv +acc +cover +fcover -l log_file.log apb_top.sv
-```
-
-Run the simulation with coverage enabled:
+Compile, simulate, generate the coverage report, and push to Git:
 
 ```bash
-vsim -vopt work.apb_top -voptargs=+acc=npr -assertdebug -l log_file.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll ucdb_file.ucdb; run -all; exit"
+make
 ```
 
-Generate the coverage report:
+Compile and simulate only:
 
 ```bash
-vcover report -html ucdb_file.ucdb -htmldir covReport -details
+make cc
 ```
 
----
+Run individual targets if required:
+
+```bash
+make all    # compile, run simulation and generate covReport
+make com    # Compile
+make sim    # Run simulation
+make cov    # Generate HTML coverage report
+make pu     # Commit and push to Git
+make check  # Check Questa license users
+```
+
+The HTML coverage report is generated in:
+
+```text
+src/simulation/covReport/
+```
+
+The UCDB coverage database is saved as:
+
+```text
+src/simulation/ucdb_file.ucdb
+```
 
 ## Simulator
 
