@@ -1,5 +1,7 @@
 # APB Master Verification
 
+[![Coverage](https://img.shields.io/badge/Coverage_Report-100%25-2EA043?style=for-the-badge&logo=codecov&logoColor=white)](https://raw.githack.com/Shreeshakumar/apb-master/main/src/simulation/covReport/index.html)
+
 ## About AMBA APB
 
 The **Advanced Peripheral Bus (APB)** is part of the ARM AMBA (Advanced Microcontroller Bus Architecture) family and is designed for communication with low-bandwidth, low-power peripheral devices. APB provides a simple, non-pipelined interface with minimal control signals, making it suitable for peripherals such as timers, UARTs, GPIOs, and interrupt controllers. An APB transaction consists of two phases: **SETUP** and **ACCESS**, ensuring straightforward and reliable communication between an APB master and one or more APB slaves.
