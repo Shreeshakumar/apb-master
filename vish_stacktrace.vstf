@@ -240,3 +240,6 @@
 # 1    0x084f502b: 'TclInvokeStringCommand + 0x7b' in '/tools/mentor/questasim_10.6c/questasim/linux/vish'
 # 2    0x0974583b: '<unknown (@0x974583b)>'
 # 3    0x09a57d63: '<unknown (@0x9a57d63)>'
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
