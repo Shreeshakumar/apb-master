@@ -31,10 +31,11 @@ class apb_transaction;
 	static int count,summary;
 	
 	static bit second_send = 1;
+	static bit third_send = 1;
 	
 	constraint c1 {	//transfer ==1;
-					//write_read == 1;
-					PSLVERR == 0;
+					write_read == 1;
+					//PSLVERR == 0;
 					//strb_in == 0;
 					//PREADY == 1;
 					}
@@ -43,7 +44,8 @@ class apb_transaction;
 					!second_send -> 	(transfer == prev_transfer &&
 										write_read == prev_write_read &&
 										addr_in == prev_addr_in  &&
-										wdata_in == prev_wdata_in); 
+										wdata_in == prev_wdata_in &&
+										strb_in == prev_strb_in); 
 					
 					!second_send ->  	PREADY == 1;
 									
