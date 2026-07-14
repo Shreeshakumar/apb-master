@@ -1,6 +1,6 @@
 # APB Master Verification
 
-[![Coverage](https://img.shields.io/badge/Coverage_Report-100%25-2EA043?style=for-the-badge&logo=codecov&logoColor=white)](https://raw.githack.com/Shreeshakumar/apb-master/main/src/simulation/covReport/index.html)
+[![Coverage](https://img.shields.io/badge/Coverage_Report-75%25-2EA043?style=for-the-badge&logo=codecov&logoColor=white)](https://raw.githack.com/Shreeshakumar/apb-master/main/src/simulation/covReport/index.html)
 
 ## About AMBA APB
 
