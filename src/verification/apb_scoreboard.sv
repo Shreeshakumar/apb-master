@@ -23,7 +23,6 @@ class apb_scoreboard;
 			
 			if (cnt ==4)cnt = 1;
 			if (!tt.transfer) cnt =0;
-			if(tt.transfer && cnt == 3 && tt.write_read && tt.PREADY) cnt =1
 		end while (apb_transaction::count <= (`num_of_trans*3)+3);
 	endtask
 

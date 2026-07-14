@@ -1,5 +1,5 @@
 # vsim -vopt work.apb_top -voptargs="+acc=npr" -assertdebug -l src/simulation/log_file.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll src/simulation/ucdb_file.ucdb; run -all; exit" 
-# Start time: 10:24:55 on Jul 14,2026
+# Start time: 19:56:30 on Jul 14,2026
 # ** Note: (vsim-8009) Loading existing optimized design _opt5
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -35,24 +35,24 @@
 # PRDATA=2cc6144f, PREADY=1, PSLVERR=1
 # 
 # GENERATOR randomized 2 				time =0
-# tula 0
+# tula 11111111111111111111111111111111
 # transfer=1, write_read=1, addr_in= 80, wdata_in=dcad23a9, strb_in =12
-# PRDATA=56d7f69f, PREADY=0, PSLVERR=0
+# PRDATA=56d7f69f, PREADY=1, PSLVERR=0
 # 
 # GENERATOR randomized 3 				time =0
-# tula 1
-# transfer=1, write_read=1, addr_in= 80, wdata_in=dcad23a9, strb_in =12
-# PRDATA=adb13787, PREADY=1, PSLVERR=0
+# tula 0
+# transfer=0, write_read=1, addr_in=253, wdata_in=43549a6f, strb_in =12
+# PRDATA=adb13787, PREADY=0, PSLVERR=0
 # 
 # GENERATOR randomized 4 				time =0
-# tula 0
-# transfer=1, write_read=1, addr_in=145, wdata_in=2c5774ea, strb_in =7
-# PRDATA=9592a3d, PREADY=0, PSLVERR=1
+# tula 1
+# transfer=0, write_read=1, addr_in=253, wdata_in=43549a6f, strb_in =12
+# PRDATA=9592a3d, PREADY=1, PSLVERR=1
 # 
 # GENERATOR randomized 5 				time =0
-# tula 1
-# transfer=1, write_read=1, addr_in=145, wdata_in=2c5774ea, strb_in =7
-# PRDATA=ae737d04, PREADY=1, PSLVERR=1
+# tula 11111111111111111111111111111111
+# transfer=1, write_read=1, addr_in=252, wdata_in=2420d46b, strb_in =2
+# PRDATA=ae737d04, PREADY=0, PSLVERR=1
 # 
 # GENERATOR randomized 6 				time =0
 # tula 0
@@ -65,24 +65,24 @@
 # PRDATA=a621c816, PREADY=1, PSLVERR=0
 # 
 # GENERATOR randomized 8 				time =0
-# tula 0
+# tula 11111111111111111111111111111111
 # transfer=1, write_read=1, addr_in=159, wdata_in=941d61a, strb_in =10
-# PRDATA=83410a23, PREADY=0, PSLVERR=1
+# PRDATA=83410a23, PREADY=1, PSLVERR=1
 # 
 # GENERATOR randomized 9 				time =0
-# tula 1
-# transfer=1, write_read=1, addr_in=159, wdata_in=941d61a, strb_in =10
-# PRDATA=9b6a873e, PREADY=1, PSLVERR=0
+# tula 0
+# transfer=0, write_read=1, addr_in=177, wdata_in=e83392d, strb_in =3
+# PRDATA=9b6a873e, PREADY=0, PSLVERR=0
 # 
 # GENERATOR randomized 10 				time =0
-# tula 0
-# transfer=0, write_read=1, addr_in=244, wdata_in=c246548b, strb_in =2
-# PRDATA=96c40bd8, PREADY=0, PSLVERR=0
+# tula 1
+# transfer=0, write_read=1, addr_in=177, wdata_in=e83392d, strb_in =3
+# PRDATA=96c40bd8, PREADY=1, PSLVERR=0
 # 
 # GENERATOR randomized 11 				time =0
-# tula 1
-# transfer=0, write_read=1, addr_in=244, wdata_in=c246548b, strb_in =2
-# PRDATA=55309bd3, PREADY=1, PSLVERR=0
+# tula 11111111111111111111111111111111
+# transfer=0, write_read=1, addr_in= 20, wdata_in=d5f2e328, strb_in =2
+# PRDATA=55309bd3, PREADY=0, PSLVERR=0
 # 
 # GENERATOR randomized 12 				time =0
 # tula 0
@@ -95,23 +95,23 @@
 # PRDATA=b831a968, PREADY=1, PSLVERR=0
 # 
 # GENERATOR randomized 14 				time =0
-# tula 0
+# tula 11111111111111111111111111111111
 # transfer=0, write_read=1, addr_in=236, wdata_in=aea347c2, strb_in =12
-# PRDATA=aec81285, PREADY=0, PSLVERR=1
+# PRDATA=aec81285, PREADY=1, PSLVERR=1
 # 
 # GENERATOR randomized 15 				time =0
-# tula 1
-# transfer=0, write_read=1, addr_in=236, wdata_in=aea347c2, strb_in =12
-# PRDATA=1d5ef288, PREADY=1, PSLVERR=0
+# tula 0
+# transfer=1, write_read=1, addr_in=197, wdata_in=8345aeab, strb_in =15
+# PRDATA=1d5ef288, PREADY=0, PSLVERR=0
 # 
 # GENERATOR randomized 16 				time =0
-# tula 0
-# transfer=0, write_read=1, addr_in=109, wdata_in=10b0c5e4, strb_in =0
-# PRDATA=eb8daff0, PREADY=0, PSLVERR=1
+# tula 1
+# transfer=1, write_read=1, addr_in=197, wdata_in=8345aeab, strb_in =15
+# PRDATA=eb8daff0, PREADY=1, PSLVERR=1
 # 
 # GENERATOR randomized 17 				time =0
-# tula 1
-# transfer=0, write_read=1, addr_in=109, wdata_in=10b0c5e4, strb_in =0
+# tula 11111111111111111111111111111111
+# transfer=0, write_read=1, addr_in= 10, wdata_in=78a3bf1e, strb_in =5
 # PRDATA=bc147d7, PREADY=1, PSLVERR=0
 # 
 # GENERATOR randomized 18 				time =0
@@ -123,6 +123,56 @@
 # tula 1
 # transfer=1, write_read=1, addr_in=221, wdata_in=32626b73, strb_in =2
 # PRDATA=8d7bbebf, PREADY=1, PSLVERR=0
+# 
+# GENERATOR randomized 20 				time =0
+# tula 11111111111111111111111111111111
+# transfer=0, write_read=1, addr_in=116, wdata_in=70a777de, strb_in =3
+# PRDATA=f39de491, PREADY=0, PSLVERR=1
+# 
+# GENERATOR randomized 21 				time =0
+# tula 0
+# transfer=1, write_read=1, addr_in= 35, wdata_in=eba70431, strb_in =13
+# PRDATA=ef0b4d30, PREADY=0, PSLVERR=1
+# 
+# GENERATOR randomized 22 				time =0
+# tula 1
+# transfer=1, write_read=1, addr_in= 35, wdata_in=eba70431, strb_in =13
+# PRDATA=101da7c4, PREADY=1, PSLVERR=1
+# 
+# GENERATOR randomized 23 				time =0
+# tula 11111111111111111111111111111111
+# transfer=1, write_read=1, addr_in=251, wdata_in=6d98cdd8, strb_in =15
+# PRDATA=baac6bb5, PREADY=1, PSLVERR=1
+# 
+# GENERATOR randomized 24 				time =0
+# tula 0
+# transfer=0, write_read=1, addr_in=189, wdata_in=f6b5892b, strb_in =0
+# PRDATA=30b57ffc, PREADY=0, PSLVERR=0
+# 
+# GENERATOR randomized 25 				time =0
+# tula 1
+# transfer=0, write_read=1, addr_in=189, wdata_in=f6b5892b, strb_in =0
+# PRDATA=d988bdb9, PREADY=1, PSLVERR=1
+# 
+# GENERATOR randomized 26 				time =0
+# tula 11111111111111111111111111111111
+# transfer=0, write_read=1, addr_in=197, wdata_in=edb1e829, strb_in =9
+# PRDATA=2c3ef61c, PREADY=0, PSLVERR=1
+# 
+# GENERATOR randomized 27 				time =0
+# tula 0
+# transfer=1, write_read=1, addr_in=240, wdata_in=29da4d23, strb_in =14
+# PRDATA=7b6478f, PREADY=0, PSLVERR=1
+# 
+# GENERATOR randomized 28 				time =0
+# tula 1
+# transfer=1, write_read=1, addr_in=240, wdata_in=29da4d23, strb_in =14
+# PRDATA=e4f70439, PREADY=1, PSLVERR=0
+# 
+# GENERATOR randomized 29 				time =0
+# tula 11111111111111111111111111111111
+# transfer=0, write_read=1, addr_in=187, wdata_in=6cab527b, strb_in =6
+# PRDATA=64499d01, PREADY=0, PSLVERR=0
 # 
 # apb_package.apb_driver.start Driver ran at iteration 0		time = 35
 # apb_package.apb_monitor.start MONITOR					time =35
@@ -157,16 +207,18 @@
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 45
 # ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=2    cnt=2
 # ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          2
+# 
+# apb_package.apb_driver.start Driver ran at iteration 1		time = 55
 # apb_package.apb_monitor.start MONITOR					time =55
 # ----------------------------------------------------------------------------------------
 # transfer                 1                    | PADDR                    'h99
 # write_read               1                    | PSEL                     1
-# addr_in                  'h99                 | PENABLE                  1
-# wdata_in                 'ha7bf7cdf           | PWRITE                   1
-# strb_in                  'h8                  | PWDATA                   'ha7bf7cdf
-# PRDATA                   'h2cc6144f           | PSTRB                    'h8
+# addr_in                  'h50                 | PENABLE                  1
+# wdata_in                 'hdcad23a9           | PWRITE                   1
+# strb_in                  'hc                  | PWDATA                   'ha7bf7cdf
+# PRDATA                   'h56d7f69f           | PSTRB                    'h8
 # PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  1                    | transfer_done            0
+# PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 55
@@ -177,15 +229,15 @@
 # apb_package.apb_driver.start Driver ran at iteration 1		time = 65
 # apb_package.apb_monitor.start MONITOR					time =65
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h99
+# transfer                 0                    | PADDR                    'h99
 # write_read               1                    | PSEL                     0
-# addr_in                  'h50                 | PENABLE                  0
-# wdata_in                 'hdcad23a9           | PWRITE                   1
+# addr_in                  'hfd                 | PENABLE                  0
+# wdata_in                 'h43549a6f           | PWRITE                   1
 # strb_in                  'hc                  | PWDATA                   'ha7bf7cdf
-# PRDATA                   'h56d7f69f           | PSTRB                    'h8
+# PRDATA                   'hadb13787           | PSTRB                    'h8
 # PREADY                   0                    | rdata_out                'h0
 # PSLVERR                  0                    | transfer_done            1
-#                                               | error                    1
+#                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 65
 # ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=4    cnt=4
@@ -194,236 +246,141 @@
 # apb_package.apb_driver.start Driver ran at iteration 1		time = 75
 # apb_package.apb_monitor.start MONITOR					time =75
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h99
-# write_read               1                    | PSEL                     1
-# addr_in                  'h50                 | PENABLE                  0
-# wdata_in                 'hdcad23a9           | PWRITE                   1
+# transfer                 0                    | PADDR                    'h99
+# write_read               1                    | PSEL                     0
+# addr_in                  'hfd                 | PENABLE                  0
+# wdata_in                 'h43549a6f           | PWRITE                   1
 # strb_in                  'hc                  | PWDATA                   'ha7bf7cdf
-# PRDATA                   'hadb13787           | PSTRB                    'h8
+# PRDATA                   'h9592a3d            | PSTRB                    'h8
 # PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
+# PSLVERR                  1                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 75
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=5    cnt=2
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=5    cnt=1
 # ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          4
+# 
+# apb_package.apb_driver.start Driver ran at iteration 2		time = 85
 # apb_package.apb_monitor.start MONITOR					time =85
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h50
-# write_read               1                    | PSEL                     1
-# addr_in                  'h50                 | PENABLE                  1
-# wdata_in                 'hdcad23a9           | PWRITE                   1
-# strb_in                  'hc                  | PWDATA                   'hdcad23a9
-# PRDATA                   'hadb13787           | PSTRB                    'hc
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
+# transfer                 1                    | PADDR                    'h99
+# write_read               1                    | PSEL                     0
+# addr_in                  'hfc                 | PENABLE                  0
+# wdata_in                 'h2420d46b           | PWRITE                   1
+# strb_in                  'h2                  | PWDATA                   'ha7bf7cdf
+# PRDATA                   'hae737d04           | PSTRB                    'h8
+# PREADY                   0                    | rdata_out                'h0
+# PSLVERR                  1                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 85
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=6    cnt=3
-# cnt 3 and PREADY error
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MISSMATCH=          2
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=6    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          5
 # 
 # apb_package.apb_driver.start Driver ran at iteration 2		time = 95
 # apb_package.apb_monitor.start MONITOR					time =95
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h50
-# write_read               1                    | PSEL                     0
-# addr_in                  'h91                 | PENABLE                  0
-# wdata_in                 'h2c5774ea           | PWRITE                   1
-# strb_in                  'h7                  | PWDATA                   'hdcad23a9
-# PRDATA                   'h9592a3d            | PSTRB                    'hc
+# transfer                 0                    | PADDR                    'h99
+# write_read               1                    | PSEL                     1
+# addr_in                  'h3a                 | PENABLE                  0
+# wdata_in                 'h1ea1347c           | PWRITE                   1
+# strb_in                  'h6                  | PWDATA                   'ha7bf7cdf
+# PRDATA                   'ha6f9cc7d           | PSTRB                    'h8
 # PREADY                   0                    | rdata_out                'h0
-# PSLVERR                  1                    | transfer_done            1
+# PSLVERR                  1                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 95
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=7    cnt=4
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          5
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=7    cnt=2
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          6
 # 
 # apb_package.apb_driver.start Driver ran at iteration 2		time = 105
 # apb_package.apb_monitor.start MONITOR					time =105
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h50
+# transfer                 0                    | PADDR                    'hfc
 # write_read               1                    | PSEL                     1
-# addr_in                  'h91                 | PENABLE                  0
-# wdata_in                 'h2c5774ea           | PWRITE                   1
-# strb_in                  'h7                  | PWDATA                   'hdcad23a9
-# PRDATA                   'hae737d04           | PSTRB                    'hc
+# addr_in                  'h3a                 | PENABLE                  1
+# wdata_in                 'h1ea1347c           | PWRITE                   1
+# strb_in                  'h6                  | PWDATA                   'h2420d46b
+# PRDATA                   'ha621c816           | PSTRB                    'h2
 # PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  1                    | transfer_done            0
+# PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 105
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=8    cnt=2
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          6
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=8    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          7
+# 
+# apb_package.apb_driver.start Driver ran at iteration 3		time = 115
 # apb_package.apb_monitor.start MONITOR					time =115
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h91
-# write_read               1                    | PSEL                     1
-# addr_in                  'h91                 | PENABLE                  1
-# wdata_in                 'h2c5774ea           | PWRITE                   1
-# strb_in                  'h7                  | PWDATA                   'h2c5774ea
-# PRDATA                   'hae737d04           | PSTRB                    'h7
+# transfer                 1                    | PADDR                    'hfc
+# write_read               1                    | PSEL                     0
+# addr_in                  'h9f                 | PENABLE                  0
+# wdata_in                 'h941d61a            | PWRITE                   1
+# strb_in                  'ha                  | PWDATA                   'h2420d46b
+# PRDATA                   'h83410a23           | PSTRB                    'h2
 # PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  1                    | transfer_done            0
+# PSLVERR                  1                    | transfer_done            1
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 115
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=9    cnt=3
-# cnt 3 and PREADY error
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MISSMATCH=          3
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=9    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          8
 # 
 # apb_package.apb_driver.start Driver ran at iteration 3		time = 125
 # apb_package.apb_monitor.start MONITOR					time =125
 # ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h91
-# write_read               1                    | PSEL                     0
-# addr_in                  'h3a                 | PENABLE                  0
-# wdata_in                 'h1ea1347c           | PWRITE                   1
-# strb_in                  'h6                  | PWDATA                   'h2c5774ea
-# PRDATA                   'ha6f9cc7d           | PSTRB                    'h7
+# transfer                 0                    | PADDR                    'hfc
+# write_read               1                    | PSEL                     1
+# addr_in                  'hb1                 | PENABLE                  0
+# wdata_in                 'he83392d            | PWRITE                   1
+# strb_in                  'h3                  | PWDATA                   'h2420d46b
+# PRDATA                   'h9b6a873e           | PSTRB                    'h2
 # PREADY                   0                    | rdata_out                'h0
-# PSLVERR                  1                    | transfer_done            1
-#                                               | error                    1
+# PSLVERR                  0                    | transfer_done            0
+#                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 125
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=10    cnt=4
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          7
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=10    cnt=2
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          9
 # 
 # apb_package.apb_driver.start Driver ran at iteration 3		time = 135
 # apb_package.apb_monitor.start MONITOR					time =135
 # ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h91
-# write_read               1                    | PSEL                     0
-# addr_in                  'h3a                 | PENABLE                  0
-# wdata_in                 'h1ea1347c           | PWRITE                   1
-# strb_in                  'h6                  | PWDATA                   'h2c5774ea
-# PRDATA                   'ha621c816           | PSTRB                    'h7
+# transfer                 0                    | PADDR                    'h9f
+# write_read               1                    | PSEL                     1
+# addr_in                  'hb1                 | PENABLE                  1
+# wdata_in                 'he83392d            | PWRITE                   1
+# strb_in                  'h3                  | PWDATA                   'h941d61a
+# PRDATA                   'h96c40bd8           | PSTRB                    'ha
 # PREADY                   1                    | rdata_out                'h0
 # PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 135
 # ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=11    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          8
-# apb_package.apb_monitor.start MONITOR					time =145
-# ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h91
-# write_read               1                    | PSEL                     0
-# addr_in                  'h3a                 | PENABLE                  0
-# wdata_in                 'h1ea1347c           | PWRITE                   1
-# strb_in                  'h6                  | PWDATA                   'h2c5774ea
-# PRDATA                   'ha621c816           | PSTRB                    'h7
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
-#                                               | error                    0
-# ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 145
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=12    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=          9
-# 
-# apb_package.apb_driver.start Driver ran at iteration 4		time = 155
-# apb_package.apb_monitor.start MONITOR					time =155
-# ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h91
-# write_read               1                    | PSEL                     0
-# addr_in                  'h9f                 | PENABLE                  0
-# wdata_in                 'h941d61a            | PWRITE                   1
-# strb_in                  'ha                  | PWDATA                   'h2c5774ea
-# PRDATA                   'h83410a23           | PSTRB                    'h7
-# PREADY                   0                    | rdata_out                'h0
-# PSLVERR                  1                    | transfer_done            0
-#                                               | error                    0
-# ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 155
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=13    cnt=1
 # ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         10
 # 
-# apb_package.apb_driver.start Driver ran at iteration 4		time = 165
-# apb_package.apb_monitor.start MONITOR					time =165
-# ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h91
-# write_read               1                    | PSEL                     1
-# addr_in                  'h9f                 | PENABLE                  0
-# wdata_in                 'h941d61a            | PWRITE                   1
-# strb_in                  'ha                  | PWDATA                   'h2c5774ea
-# PRDATA                   'h9b6a873e           | PSTRB                    'h7
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
-#                                               | error                    0
-# ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 165
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=14    cnt=2
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         11
-# apb_package.apb_monitor.start MONITOR					time =175
-# ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h9f
-# write_read               1                    | PSEL                     1
-# addr_in                  'h9f                 | PENABLE                  1
-# wdata_in                 'h941d61a            | PWRITE                   1
-# strb_in                  'ha                  | PWDATA                   'h941d61a
-# PRDATA                   'h9b6a873e           | PSTRB                    'ha
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
-#                                               | error                    0
-# ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 175
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=15    cnt=3
-# cnt 3 and PREADY error
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MISSMATCH=          4
-# 
-# apb_package.apb_driver.start Driver ran at iteration 5		time = 185
-# apb_package.apb_monitor.start MONITOR					time =185
+# apb_package.apb_driver.start Driver ran at iteration 4		time = 145
+# apb_package.apb_monitor.start MONITOR					time =145
 # ----------------------------------------------------------------------------------------
 # transfer                 0                    | PADDR                    'h9f
 # write_read               1                    | PSEL                     0
-# addr_in                  'hf4                 | PENABLE                  0
-# wdata_in                 'hc246548b           | PWRITE                   1
+# addr_in                  'h14                 | PENABLE                  0
+# wdata_in                 'hd5f2e328           | PWRITE                   1
 # strb_in                  'h2                  | PWDATA                   'h941d61a
-# PRDATA                   'h96c40bd8           | PSTRB                    'ha
+# PRDATA                   'h55309bd3           | PSTRB                    'ha
 # PREADY                   0                    | rdata_out                'h0
 # PSLVERR                  0                    | transfer_done            1
 #                                               | error                    0
 # ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 185
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=16    cnt=4
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         12
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 145
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=12    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         11
 # 
-# apb_package.apb_driver.start Driver ran at iteration 5		time = 195
-# apb_package.apb_monitor.start MONITOR					time =195
-# ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h9f
-# write_read               1                    | PSEL                     0
-# addr_in                  'hf4                 | PENABLE                  0
-# wdata_in                 'hc246548b           | PWRITE                   1
-# strb_in                  'h2                  | PWDATA                   'h941d61a
-# PRDATA                   'h55309bd3           | PSTRB                    'ha
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
-#                                               | error                    0
-# ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 195
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=17    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         13
-# apb_package.apb_monitor.start MONITOR					time =205
-# ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h9f
-# write_read               1                    | PSEL                     0
-# addr_in                  'hf4                 | PENABLE                  0
-# wdata_in                 'hc246548b           | PWRITE                   1
-# strb_in                  'h2                  | PWDATA                   'h941d61a
-# PRDATA                   'h55309bd3           | PSTRB                    'ha
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
-#                                               | error                    0
-# ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 205
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=18    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         14
-# 
-# apb_package.apb_driver.start Driver ran at iteration 6		time = 215
-# apb_package.apb_monitor.start MONITOR					time =215
+# apb_package.apb_driver.start Driver ran at iteration 4		time = 155
+# apb_package.apb_monitor.start MONITOR					time =155
 # ----------------------------------------------------------------------------------------
 # transfer                 0                    | PADDR                    'h9f
 # write_read               1                    | PSEL                     0
@@ -435,12 +392,12 @@
 # PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 215
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=19    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         15
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 155
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=13    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         12
 # 
-# apb_package.apb_driver.start Driver ran at iteration 6		time = 225
-# apb_package.apb_monitor.start MONITOR					time =225
+# apb_package.apb_driver.start Driver ran at iteration 4		time = 165
+# apb_package.apb_monitor.start MONITOR					time =165
 # ----------------------------------------------------------------------------------------
 # transfer                 0                    | PADDR                    'h9f
 # write_read               1                    | PSEL                     0
@@ -452,27 +409,12 @@
 # PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 225
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=20    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         16
-# apb_package.apb_monitor.start MONITOR					time =235
-# ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h9f
-# write_read               1                    | PSEL                     0
-# addr_in                  'hfd                 | PENABLE                  0
-# wdata_in                 'h44db391e           | PWRITE                   1
-# strb_in                  'hc                  | PWDATA                   'h941d61a
-# PRDATA                   'hb831a968           | PSTRB                    'ha
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
-#                                               | error                    0
-# ========================================================================================
-# apb_package.apb_scoreboard.start SCOREBOARD  				time = 235
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=21    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         17
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 165
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=14    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         13
 # 
-# apb_package.apb_driver.start Driver ran at iteration 7		time = 245
-# apb_package.apb_monitor.start MONITOR					time =245
+# apb_package.apb_driver.start Driver ran at iteration 5		time = 175
+# apb_package.apb_monitor.start MONITOR					time =175
 # ----------------------------------------------------------------------------------------
 # transfer                 0                    | PADDR                    'h9f
 # write_read               1                    | PSEL                     0
@@ -480,106 +422,232 @@
 # wdata_in                 'haea347c2           | PWRITE                   1
 # strb_in                  'hc                  | PWDATA                   'h941d61a
 # PRDATA                   'haec81285           | PSTRB                    'ha
+# PREADY                   1                    | rdata_out                'h0
+# PSLVERR                  1                    | transfer_done            0
+#                                               | error                    0
+# ========================================================================================
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 175
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=15    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         14
+# 
+# apb_package.apb_driver.start Driver ran at iteration 5		time = 185
+# apb_package.apb_monitor.start MONITOR					time =185
+# ----------------------------------------------------------------------------------------
+# transfer                 1                    | PADDR                    'h9f
+# write_read               1                    | PSEL                     0
+# addr_in                  'hc5                 | PENABLE                  0
+# wdata_in                 'h8345aeab           | PWRITE                   1
+# strb_in                  'hf                  | PWDATA                   'h941d61a
+# PRDATA                   'h1d5ef288           | PSTRB                    'ha
+# PREADY                   0                    | rdata_out                'h0
+# PSLVERR                  0                    | transfer_done            0
+#                                               | error                    0
+# ========================================================================================
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 185
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=16    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         15
+# 
+# apb_package.apb_driver.start Driver ran at iteration 5		time = 195
+# apb_package.apb_monitor.start MONITOR					time =195
+# ----------------------------------------------------------------------------------------
+# transfer                 1                    | PADDR                    'h9f
+# write_read               1                    | PSEL                     1
+# addr_in                  'hc5                 | PENABLE                  0
+# wdata_in                 'h8345aeab           | PWRITE                   1
+# strb_in                  'hf                  | PWDATA                   'h941d61a
+# PRDATA                   'heb8daff0           | PSTRB                    'ha
+# PREADY                   1                    | rdata_out                'h0
+# PSLVERR                  1                    | transfer_done            0
+#                                               | error                    0
+# ========================================================================================
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 195
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=17    cnt=2
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         16
+# 
+# apb_package.apb_driver.start Driver ran at iteration 6		time = 205
+# apb_package.apb_monitor.start MONITOR					time =205
+# ----------------------------------------------------------------------------------------
+# transfer                 0                    | PADDR                    'hc5
+# write_read               1                    | PSEL                     1
+# addr_in                  'ha                  | PENABLE                  1
+# wdata_in                 'h78a3bf1e           | PWRITE                   1
+# strb_in                  'h5                  | PWDATA                   'h8345aeab
+# PRDATA                   'hbc147d7            | PSTRB                    'hf
+# PREADY                   1                    | rdata_out                'h0
+# PSLVERR                  0                    | transfer_done            0
+#                                               | error                    0
+# ========================================================================================
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 205
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=18    cnt=3
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         17
+# 
+# apb_package.apb_driver.start Driver ran at iteration 6		time = 215
+# apb_package.apb_monitor.start MONITOR					time =215
+# ----------------------------------------------------------------------------------------
+# transfer                 1                    | PADDR                    'hc5
+# write_read               1                    | PSEL                     0
+# addr_in                  'hdd                 | PENABLE                  0
+# wdata_in                 'h32626b73           | PWRITE                   1
+# strb_in                  'h2                  | PWDATA                   'h8345aeab
+# PRDATA                   'h108a0193           | PSTRB                    'hf
+# PREADY                   0                    | rdata_out                'h0
+# PSLVERR                  0                    | transfer_done            1
+#                                               | error                    0
+# ========================================================================================
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 215
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=19    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         18
+# 
+# apb_package.apb_driver.start Driver ran at iteration 6		time = 225
+# apb_package.apb_monitor.start MONITOR					time =225
+# ----------------------------------------------------------------------------------------
+# transfer                 1                    | PADDR                    'hc5
+# write_read               1                    | PSEL                     1
+# addr_in                  'hdd                 | PENABLE                  0
+# wdata_in                 'h32626b73           | PWRITE                   1
+# strb_in                  'h2                  | PWDATA                   'h8345aeab
+# PRDATA                   'h8d7bbebf           | PSTRB                    'hf
+# PREADY                   1                    | rdata_out                'h0
+# PSLVERR                  0                    | transfer_done            0
+#                                               | error                    0
+# ========================================================================================
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 225
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=20    cnt=2
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         19
+# 
+# apb_package.apb_driver.start Driver ran at iteration 7		time = 235
+# apb_package.apb_monitor.start MONITOR					time =235
+# ----------------------------------------------------------------------------------------
+# transfer                 0                    | PADDR                    'hdd
+# write_read               1                    | PSEL                     1
+# addr_in                  'h74                 | PENABLE                  1
+# wdata_in                 'h70a777de           | PWRITE                   1
+# strb_in                  'h3                  | PWDATA                   'h32626b73
+# PRDATA                   'hf39de491           | PSTRB                    'h2
+# PREADY                   0                    | rdata_out                'h0
+# PSLVERR                  1                    | transfer_done            0
+#                                               | error                    0
+# ========================================================================================
+# apb_package.apb_scoreboard.start SCOREBOARD  				time = 235
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=21    cnt=3
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         20
+# 
+# apb_package.apb_driver.start Driver ran at iteration 7		time = 245
+# apb_package.apb_monitor.start MONITOR					time =245
+# ----------------------------------------------------------------------------------------
+# transfer                 1                    | PADDR                    'hdd
+# write_read               1                    | PSEL                     1
+# addr_in                  'h23                 | PENABLE                  1
+# wdata_in                 'heba70431           | PWRITE                   1
+# strb_in                  'hd                  | PWDATA                   'h32626b73
+# PRDATA                   'hef0b4d30           | PSTRB                    'h2
 # PREADY                   0                    | rdata_out                'h0
 # PSLVERR                  1                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 245
 # ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=22    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         18
+# cnt 1 error
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MISSMATCH=          2
 # 
 # apb_package.apb_driver.start Driver ran at iteration 7		time = 255
 # apb_package.apb_monitor.start MONITOR					time =255
 # ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h9f
-# write_read               1                    | PSEL                     0
-# addr_in                  'hec                 | PENABLE                  0
-# wdata_in                 'haea347c2           | PWRITE                   1
-# strb_in                  'hc                  | PWDATA                   'h941d61a
-# PRDATA                   'h1d5ef288           | PSTRB                    'ha
+# transfer                 1                    | PADDR                    'hdd
+# write_read               1                    | PSEL                     1
+# addr_in                  'h23                 | PENABLE                  1
+# wdata_in                 'heba70431           | PWRITE                   1
+# strb_in                  'hd                  | PWDATA                   'h32626b73
+# PRDATA                   'h101da7c4           | PSTRB                    'h2
 # PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
+# PSLVERR                  1                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 255
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=23    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         19
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=23    cnt=2
+# cnt 2 error
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MISSMATCH=          3
+# 
+# apb_package.apb_driver.start Driver ran at iteration 8		time = 265
 # apb_package.apb_monitor.start MONITOR					time =265
 # ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h9f
+# transfer                 1                    | PADDR                    'hdd
 # write_read               1                    | PSEL                     0
-# addr_in                  'hec                 | PENABLE                  0
-# wdata_in                 'haea347c2           | PWRITE                   1
-# strb_in                  'hc                  | PWDATA                   'h941d61a
-# PRDATA                   'h1d5ef288           | PSTRB                    'ha
+# addr_in                  'hfb                 | PENABLE                  0
+# wdata_in                 'h6d98cdd8           | PWRITE                   1
+# strb_in                  'hf                  | PWDATA                   'h32626b73
+# PRDATA                   'hbaac6bb5           | PSTRB                    'h2
 # PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
-#                                               | error                    0
+# PSLVERR                  1                    | transfer_done            1
+#                                               | error                    1
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 265
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=24    cnt=1
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         20
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=24    cnt=3
+# cnt 3 and PREADY error
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MISSMATCH=          4
 # 
 # apb_package.apb_driver.start Driver ran at iteration 8		time = 275
 # apb_package.apb_monitor.start MONITOR					time =275
 # ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h9f
-# write_read               1                    | PSEL                     0
-# addr_in                  'h6d                 | PENABLE                  0
-# wdata_in                 'h10b0c5e4           | PWRITE                   1
-# strb_in                  'h0                  | PWDATA                   'h941d61a
-# PRDATA                   'heb8daff0           | PSTRB                    'ha
+# transfer                 0                    | PADDR                    'hdd
+# write_read               1                    | PSEL                     1
+# addr_in                  'hbd                 | PENABLE                  0
+# wdata_in                 'hf6b5892b           | PWRITE                   1
+# strb_in                  'h0                  | PWDATA                   'h32626b73
+# PRDATA                   'h30b57ffc           | PSTRB                    'h2
 # PREADY                   0                    | rdata_out                'h0
-# PSLVERR                  1                    | transfer_done            0
+# PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 275
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=25    cnt=1
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=25    cnt=4
 # ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         21
 # 
 # apb_package.apb_driver.start Driver ran at iteration 8		time = 285
 # apb_package.apb_monitor.start MONITOR					time =285
 # ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h9f
-# write_read               1                    | PSEL                     0
-# addr_in                  'h6d                 | PENABLE                  0
-# wdata_in                 'h10b0c5e4           | PWRITE                   1
-# strb_in                  'h0                  | PWDATA                   'h941d61a
-# PRDATA                   'hbc147d7            | PSTRB                    'ha
+# transfer                 0                    | PADDR                    'hfb
+# write_read               1                    | PSEL                     1
+# addr_in                  'hbd                 | PENABLE                  1
+# wdata_in                 'hf6b5892b           | PWRITE                   1
+# strb_in                  'h0                  | PWDATA                   'h6d98cdd8
+# PRDATA                   'hd988bdb9           | PSTRB                    'hf
 # PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
+# PSLVERR                  1                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 285
 # ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=26    cnt=1
 # ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         22
+# 
+# apb_package.apb_driver.start Driver ran at iteration 9		time = 295
 # apb_package.apb_monitor.start MONITOR					time =295
 # ----------------------------------------------------------------------------------------
-# transfer                 0                    | PADDR                    'h9f
+# transfer                 0                    | PADDR                    'hfb
 # write_read               1                    | PSEL                     0
-# addr_in                  'h6d                 | PENABLE                  0
-# wdata_in                 'h10b0c5e4           | PWRITE                   1
-# strb_in                  'h0                  | PWDATA                   'h941d61a
-# PRDATA                   'hbc147d7            | PSTRB                    'ha
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
-#                                               | error                    0
+# addr_in                  'hc5                 | PENABLE                  0
+# wdata_in                 'hedb1e829           | PWRITE                   1
+# strb_in                  'h9                  | PWDATA                   'h6d98cdd8
+# PRDATA                   'h2c3ef61c           | PSTRB                    'hf
+# PREADY                   0                    | rdata_out                'h0
+# PSLVERR                  1                    | transfer_done            1
+#                                               | error                    1
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 295
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=27    cnt=1
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=27    cnt=1
 # ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         23
 # 
 # apb_package.apb_driver.start Driver ran at iteration 9		time = 305
 # apb_package.apb_monitor.start MONITOR					time =305
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h9f
+# transfer                 1                    | PADDR                    'hfb
 # write_read               1                    | PSEL                     0
-# addr_in                  'hdd                 | PENABLE                  0
-# wdata_in                 'h32626b73           | PWRITE                   1
-# strb_in                  'h2                  | PWDATA                   'h941d61a
-# PRDATA                   'h108a0193           | PSTRB                    'ha
+# addr_in                  'hf0                 | PENABLE                  0
+# wdata_in                 'h29da4d23           | PWRITE                   1
+# strb_in                  'he                  | PWDATA                   'h6d98cdd8
+# PRDATA                   'h7b6478f            | PSTRB                    'hf
 # PREADY                   0                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            0
+# PSLVERR                  1                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 305
@@ -589,12 +657,12 @@
 # apb_package.apb_driver.start Driver ran at iteration 9		time = 315
 # apb_package.apb_monitor.start MONITOR					time =315
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'h9f
+# transfer                 1                    | PADDR                    'hfb
 # write_read               1                    | PSEL                     1
-# addr_in                  'hdd                 | PENABLE                  0
-# wdata_in                 'h32626b73           | PWRITE                   1
-# strb_in                  'h2                  | PWDATA                   'h941d61a
-# PRDATA                   'h8d7bbebf           | PSTRB                    'ha
+# addr_in                  'hf0                 | PENABLE                  0
+# wdata_in                 'h29da4d23           | PWRITE                   1
+# strb_in                  'he                  | PWDATA                   'h6d98cdd8
+# PRDATA                   'he4f70439           | PSTRB                    'hf
 # PREADY                   1                    | rdata_out                'h0
 # PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
@@ -602,88 +670,88 @@
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 315
 # ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=29    cnt=2
 # ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         25
+# 
+# apb_package.apb_driver.start Driver ran at iteration 10		time = 325
 # apb_package.apb_monitor.start MONITOR					time =325
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'hdd
+# transfer                 0                    | PADDR                    'hf0
 # write_read               1                    | PSEL                     1
-# addr_in                  'hdd                 | PENABLE                  1
-# wdata_in                 'h32626b73           | PWRITE                   1
-# strb_in                  'h2                  | PWDATA                   'h32626b73
-# PRDATA                   'h8d7bbebf           | PSTRB                    'h2
-# PREADY                   1                    | rdata_out                'h0
+# addr_in                  'hbb                 | PENABLE                  1
+# wdata_in                 'h6cab527b           | PWRITE                   1
+# strb_in                  'h6                  | PWDATA                   'h29da4d23
+# PRDATA                   'h64499d01           | PSTRB                    'he
+# PREADY                   0                    | rdata_out                'h0
 # PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 325
 # ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=30    cnt=3
-# cnt 3 and PREADY error
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MISSMATCH=          5
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         26
 # apb_package.apb_monitor.start MONITOR					time =335
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'hdd
-# write_read               1                    | PSEL                     0
-# addr_in                  'hdd                 | PENABLE                  0
-# wdata_in                 'h32626b73           | PWRITE                   1
-# strb_in                  'h2                  | PWDATA                   'h32626b73
-# PRDATA                   'h8d7bbebf           | PSTRB                    'h2
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            1
+# transfer                 0                    | PADDR                    'hf0
+# write_read               1                    | PSEL                     1
+# addr_in                  'hbb                 | PENABLE                  1
+# wdata_in                 'h6cab527b           | PWRITE                   1
+# strb_in                  'h6                  | PWDATA                   'h29da4d23
+# PRDATA                   'h64499d01           | PSTRB                    'he
+# PREADY                   0                    | rdata_out                'h0
+# PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 335
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=31    cnt=4
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         26
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=31    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         27
 # apb_package.apb_monitor.start MONITOR					time =345
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'hdd
+# transfer                 0                    | PADDR                    'hf0
 # write_read               1                    | PSEL                     1
-# addr_in                  'hdd                 | PENABLE                  0
-# wdata_in                 'h32626b73           | PWRITE                   1
-# strb_in                  'h2                  | PWDATA                   'h32626b73
-# PRDATA                   'h8d7bbebf           | PSTRB                    'h2
-# PREADY                   1                    | rdata_out                'h0
+# addr_in                  'hbb                 | PENABLE                  1
+# wdata_in                 'h6cab527b           | PWRITE                   1
+# strb_in                  'h6                  | PWDATA                   'h29da4d23
+# PRDATA                   'h64499d01           | PSTRB                    'he
+# PREADY                   0                    | rdata_out                'h0
 # PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 345
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=32    cnt=2
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         27
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=32    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         28
 # apb_package.apb_monitor.start MONITOR					time =355
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'hdd
+# transfer                 0                    | PADDR                    'hf0
 # write_read               1                    | PSEL                     1
-# addr_in                  'hdd                 | PENABLE                  1
-# wdata_in                 'h32626b73           | PWRITE                   1
-# strb_in                  'h2                  | PWDATA                   'h32626b73
-# PRDATA                   'h8d7bbebf           | PSTRB                    'h2
-# PREADY                   1                    | rdata_out                'h0
+# addr_in                  'hbb                 | PENABLE                  1
+# wdata_in                 'h6cab527b           | PWRITE                   1
+# strb_in                  'h6                  | PWDATA                   'h29da4d23
+# PRDATA                   'h64499d01           | PSTRB                    'he
+# PREADY                   0                    | rdata_out                'h0
 # PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 355
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=33    cnt=3
-# cnt 3 and PREADY error
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MISSMATCH=          6
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=33    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         29
 # apb_package.apb_monitor.start MONITOR					time =365
 # ----------------------------------------------------------------------------------------
-# transfer                 1                    | PADDR                    'hdd
-# write_read               1                    | PSEL                     0
-# addr_in                  'hdd                 | PENABLE                  0
-# wdata_in                 'h32626b73           | PWRITE                   1
-# strb_in                  'h2                  | PWDATA                   'h32626b73
-# PRDATA                   'h8d7bbebf           | PSTRB                    'h2
-# PREADY                   1                    | rdata_out                'h0
-# PSLVERR                  0                    | transfer_done            1
+# transfer                 0                    | PADDR                    'hf0
+# write_read               1                    | PSEL                     1
+# addr_in                  'hbb                 | PENABLE                  1
+# wdata_in                 'h6cab527b           | PWRITE                   1
+# strb_in                  'h6                  | PWDATA                   'h29da4d23
+# PRDATA                   'h64499d01           | PSTRB                    'he
+# PREADY                   0                    | rdata_out                'h0
+# PSLVERR                  0                    | transfer_done            0
 #                                               | error                    0
 # ========================================================================================
 # apb_package.apb_scoreboard.start SCOREBOARD  				time = 365
-# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=1   trans_cnt=34    cnt=4
-# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         28
+# ERROR WARNING ERROR WARNING ERROR WARNING transfer_done=0   trans_cnt=34    cnt=1
+# ***************************************************************************************************       DATA COMPARE SUCCESSFUL MATCH=         30
 # **********************************************************************************************************************************
-# ****************     TOTAL MATCH = 28        *******************************    TOTAL MISMATCH = 6    ***********************
+# ****************     TOTAL MATCH = 30        *******************************    TOTAL MISMATCH = 4    ***********************
 # **********************************************************************************************************************************
 # ** Note: $finish    : src/verification/apb_top.sv(41)
-#    Time: 375 ns  Iteration: 4  Instance: /apb_top
+#    Time: 375 ns  Iteration: 3  Instance: /apb_top
 # Saving coverage database on exit...
-# End time: 10:24:56 on Jul 14,2026, Elapsed time: 0:00:01
+# End time: 19:56:31 on Jul 14,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

@@ -10,7 +10,6 @@ class apb_transaction;
 	bit [`DATA_WIDTH-1:0]		prev_wdata_in;
 	bit [(`DATA_WIDTH/8)-1:0]	prev_strb_in;
 	
-	
 	//outputs to user from master
 	bit [`DATA_WIDTH-1:0]			rdata_out;
 	bit 							transfer_done, error;
@@ -27,51 +26,33 @@ class apb_transaction;
 	//bit [`DATA_WIDTH-1:0]		prev_PRDATA;
 	//bit 						prev_PREADY, prev_PSLVERR;
 	
-	static bit send;
-	static int count,summary;
+	static bit send, summary;
+	static int count;
+	static bit [1:0]send_cnt;
 	
-	static bit second_send = 1;
-	static bit third_send = 1;
-	
-	constraint c1 {	//transfer ==1;
-					write_read == 1;
-					//PSLVERR == 0;
-					//strb_in == 0;
-					//PREADY == 1;
+	constraint c1 {						//transfer ==1;
+										write_read == 1;
+										//PSLVERR == 0;
+										//strb_in == 0;
+										//PREADY == 1;
 					}
 					
-	constraint c2 { second_send  ->   	PREADY == 0;
-					!second_send -> 	(transfer == prev_transfer &&
-										write_read == prev_write_read &&
-										addr_in == prev_addr_in  &&
-										wdata_in == prev_wdata_in &&
-										strb_in == prev_strb_in); 
+	constraint c2 { (send_cnt==0) ->   	PREADY == 0;
+					(send_cnt==1) -> 	(transfer 	== prev_transfer 	&&
+										write_read 	== prev_write_read 	&&
+										addr_in 	== prev_addr_in  	&&
+										wdata_in 	== prev_wdata_in 	&&
+										strb_in 	== prev_strb_in		); 
 					
-					!second_send ->  	PREADY == 1;
+					(send_cnt==1) ->  	PREADY == 1;
 									
-						//PSLVERR == 0;	
+					//PSLVERR == 0;	
 					}
-	
-	//constraint wr_rd_value {{write_enb,read_enb} inside {[0:3]};	}
-	//constraint wr_rd_ve { data_in != 0;	 						}
-	//constraint wr_rd_not_equal {{write_enb,read_enb} != 2'b11;	}
-
-	virtual function apb_transaction copy();
-		copy = new();
-		copy.transfer 	= this.transfer;
-		copy.write_read = this.write_read;
-		copy.addr_in 	= this.addr_in;
-		copy.wdata_in 	= this.wdata_in;
-		copy.strb_in 	= this.strb_in;
-		
-		copy.PRDATA 	= this.PRDATA;
-		copy.PREADY 	= this.PREADY;
-		copy.PSLVERR 	= this.PSLVERR;
-		return copy;
-	endfunction
 	
 	function void post_randomize();
-		second_send = !second_send;
+		if(send_cnt == 2)send_cnt = 0; 
+		else send_cnt = send_cnt+1;
+		
 		prev_transfer = transfer;
 		prev_write_read = write_read;
 		prev_addr_in = addr_in;
@@ -91,6 +72,20 @@ class apb_transaction;
 			$display("%-24s %-20d | %-24s %0d","PSLVERR", PSLVERR,"transfer_done", transfer_done);
 			$display("%-24s %-20s | %-24s %0d","", "","error", error);
 			$display("========================================================================================");
+	endfunction
+	
+	virtual function apb_transaction copy();
+		copy = new();
+			copy.transfer 	= this.transfer;
+			copy.write_read = this.write_read;
+			copy.addr_in 	= this.addr_in;
+			copy.wdata_in 	= this.wdata_in;
+			copy.strb_in 	= this.strb_in;
+			
+			copy.PRDATA 	= this.PRDATA;
+			copy.PREADY 	= this.PREADY;
+			copy.PSLVERR 	= this.PSLVERR;
+		return copy;
 	endfunction
 
 endclass

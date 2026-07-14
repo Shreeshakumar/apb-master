@@ -15,7 +15,7 @@ class apb_driver;
 		repeat(2) @(vif.cb_driver);
 		for(int i =0; i<`num_of_trans; i++)
 		begin
-			repeat(2)
+			repeat(3)
 			begin
 				mbx_gd.get(trans);
 				@(vif.cb_driver);
